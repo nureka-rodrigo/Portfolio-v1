@@ -10,7 +10,7 @@ function ThemeSwitcher() {
     }
 }
 
-export default function ThemeButton() {
+const ThemeButton = () => {
     // theme change function
     const themeIcons = {
         dark: <MdDarkMode className="h-5 w-5"/>,
@@ -25,7 +25,7 @@ export default function ThemeButton() {
     }, [currentTheme])
 
     return (
-        <div className="text-sla mx-5 h-fit w-fit rounded-md p-1.5 dark:text-white">
+        <div className="mx-5 h-fit w-fit rounded-md p-1.5 dark:text-white">
             <Dropdown
                 inline
                 label={themeIcons[currentTheme]}
@@ -60,3 +60,5 @@ export default function ThemeButton() {
         </div>
     )
 }
+
+export default ThemeButton
