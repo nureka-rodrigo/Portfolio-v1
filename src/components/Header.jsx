@@ -4,7 +4,6 @@ import LogoLight from "../assets/img/logo-light.svg"
 import LogoDark from "../assets/img/logo-dark.svg"
 
 const Header = () => {
-
     let pathArray = useLocation().pathname.split("/")
     let lastPart = pathArray[pathArray.length - 1]
     const Theme = localStorage.theme
@@ -31,7 +30,7 @@ const Header = () => {
                             </li>
                             <li>
                                 <Link
-                                    to={"projects"}
+                                    to={"/projects"}
                                     className={`block py-2 pr-4 pl-3 rounded bg-primary-700 lg:bg-transparent lg:text-gray-900 lg:p-0 dark:text-white ${lastPart === "projects" ? "rounded-none border-b-2 border-gray-900 dark:border-white" : ""}`}
                                 >
                                     Projects
@@ -39,7 +38,7 @@ const Header = () => {
                             </li>
                             <li>
                                 <Link
-                                    to={"resume"}
+                                    to={"/resume"}
                                     className={`block py-2 pr-4 pl-3 rounded bg-primary-700 lg:bg-transparent lg:text-gray-900 lg:p-0 dark:text-white ${lastPart === "resume" ? "rounded-none border-b-2 border-gray-900 dark:border-white" : ""}`}
                                 >
                                     Resume
@@ -47,7 +46,7 @@ const Header = () => {
                             </li>
                             <li>
                                 <Link
-                                    to={"contact"}
+                                    to={"/contact"}
                                     className={`block py-2 pr-4 pl-3 rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0  text-gray-900 dark:text-white ${lastPart === "contact" ? "rounded-none border-b-2 border-white" : ""}`}
                                 >
                                     Contact
