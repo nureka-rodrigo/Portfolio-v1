@@ -1,63 +1,40 @@
 import {useEffect, useState} from "react"
-import {MdComputer, MdDarkMode, MdSunny} from "react-icons/md"
-import {Dropdown} from "flowbite-react"
-
-function ThemeSwitcher() {
-    if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-        document.documentElement.classList.add("dark")
-    } else {
-        document.documentElement.classList.remove("dark")
-    }
-}
+import {MdDarkMode, MdSunny} from "react-icons/md"
 
 const ThemeButton = () => {
-    // theme change function
+    const [currentTheme, setCurrentTheme] = useState(!("theme" in localStorage) ? "default" : localStorage.theme === "dark" ? "dark" : "light",)
+
     const themeIcons = {
-        dark: <MdDarkMode className="h-5 w-5"/>,
-        light: <MdSunny className="h-5 w-5"/>,
-        default: <MdComputer className="h-5 w-5"/>,
+        dark: <MdDarkMode className="h-5 w-5 text-white"/>,
+        light: <MdSunny className="h-5 w-5 text-black"/>,
     }
 
-    const [currentTheme, setCurrentTheme] = useState(!("theme" in localStorage) ? "default" : localStorage.theme === "dark" ? "dark" : "light",)
+    const ThemeSwitcher = () => {
+        if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+            document.documentElement.classList.add("dark")
+        } else {
+            document.documentElement.classList.remove("dark")
+        }
+    }
 
     useEffect(() => {
         ThemeSwitcher()
     }, [currentTheme])
 
+
     return (
-        <div className="mx-5 h-fit w-fit rounded-md p-1.5 dark:text-white">
-            <Dropdown
-                inline
-                label={themeIcons[currentTheme]}
-                placement={"top"}
-                arrowIcon={false}
+        <>
+            <button
+                className="absolute right-10 mx-5 bg-grey-900 h-fit w-fit rounded-md p-1.5 dark:bg-black"
+                onClick={() => {
+                    const newTheme = currentTheme === "light" ? "dark" : "light";
+                    setCurrentTheme(newTheme);
+                    localStorage.theme = newTheme;
+                }}
             >
-                <Dropdown.Item
-                    onClick={() => {
-                        setCurrentTheme("dark")
-                        localStorage.theme = "dark"
-                    }}
-                >
-                    {themeIcons.dark} &ensp;Dark
-                </Dropdown.Item>
-                <Dropdown.Item
-                    onClick={() => {
-                        setCurrentTheme("light")
-                        localStorage.theme = "light"
-                    }}
-                >
-                    {themeIcons.light} &ensp;Light
-                </Dropdown.Item>
-                <Dropdown.Item
-                    onClick={() => {
-                        setCurrentTheme("default")
-                        localStorage.removeItem("theme")
-                    }}
-                >
-                    {themeIcons.default} &ensp;Default
-                </Dropdown.Item>
-            </Dropdown>
-        </div>
+                {currentTheme === "light" ? themeIcons.light : themeIcons.dark}
+            </button>
+        </>
     )
 }
 
