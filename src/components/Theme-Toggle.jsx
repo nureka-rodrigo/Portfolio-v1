@@ -21,15 +21,14 @@ const ThemeButton = () => {
         ThemeSwitcher()
     }, [currentTheme])
 
-
     return (
         <>
             <button
-                className="absolute right-10 mx-5 bg-grey-900 h-fit w-fit rounded-md p-1.5 dark:bg-black"
+                className="absolute right-20 bg-grey-900 h-fit w-fit rounded-md p-1.5 dark:bg-black"
                 onClick={() => {
-                    const newTheme = currentTheme === "light" ? "dark" : "light";
-                    setCurrentTheme(newTheme);
-                    localStorage.theme = newTheme;
+                    const newTheme = currentTheme === "light" ? "dark" : "light"
+                    setCurrentTheme(newTheme)
+                    localStorage.theme = newTheme
                 }}
             >
                 {currentTheme === "light" ? themeIcons.light : themeIcons.dark}
