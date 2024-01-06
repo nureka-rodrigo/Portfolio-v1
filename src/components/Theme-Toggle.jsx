@@ -2,12 +2,7 @@ import { useEffect, useState } from "react";
 import { MdDarkMode, MdSunny } from "react-icons/md";
 
 const ThemeButton = () => {
-    const [currentTheme, setCurrentTheme] = useState(
-        !("theme" in localStorage)
-            ? "default"
-            : localStorage.theme === "dark"
-              ? "dark"
-              : "light",
+    const [currentTheme, setCurrentTheme] = useState(!("theme" in localStorage) ? "default" : localStorage.theme === "dark" ? "dark" : "light",
     );
 
     const themeIcons = {

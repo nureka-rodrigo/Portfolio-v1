@@ -8,7 +8,7 @@ const Header = () => {
 
     return (
         <header>
-            <nav className="bg-white border-gray-200 px-4 lg:px-6 py-4 dark:bg-black">
+            <nav className="border-gray-200 px-4 lg:px-6 py-4">
                 <div className="flex flex-wrap items-center justify-center mx-auto max-w-screen-xl">
                     <Link className="flex absolute left-20" to="/">
                         <img
