@@ -30,6 +30,7 @@ const Contact = () => {
             setInputErrorName("This field can not be empty!")
         } else {
             setInputErrorName(null)
+            setName(data)
         }
     }
 
@@ -40,6 +41,7 @@ const Contact = () => {
             setInputErrorEmail("This field can not be empty!")
         } else {
             setInputErrorEmail(null)
+            setEmail(data)
         }
     }
 
@@ -50,6 +52,7 @@ const Contact = () => {
             setInputErrorSubject("This field can not be empty!")
         } else {
             setInputErrorSubject(null)
+            setSubject(data)
         }
     }
 
@@ -60,13 +63,13 @@ const Contact = () => {
             setInputErrorMessage("This field can not be empty!")
         } else {
             setInputErrorMessage(null)
+            setMessage(data)
         }
     }
 
     const submitForm = (e) => {
         e.preventDefault()
         const data = Object.fromEntries(new FormData(e.target).entries())
-        const formData = new FormData(e.target)
 
         if (data.from_name === "" && data.from_email === "" && data.subject === "" && data.message === "") {
             setInputErrorName("This field can not be empty!")
@@ -87,11 +90,6 @@ const Contact = () => {
             setInputErrorSubject(null)
             setInputErrorMessage(null)
 
-            setName(formData.get('from_name'))
-            setEmail(formData.get('from_email'))
-            setSubject(formData.get('subject'))
-            setMessage(formData.get('message'))
-
             setIsLoading(true)
 
             const formParameters = {
@@ -107,7 +105,7 @@ const Contact = () => {
                         toast.success('Message received', {
                             ...ToastSettings
                         })
-                        console.log(response.text)
+                        console.log(formParameters)
                         setIsLoading(false)
                     }
                 }, (error) => {
