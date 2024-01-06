@@ -1,11 +1,11 @@
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 import {useState} from "react";
-import {Textarea, TextInput} from "flowbite-react";
-import LoadingAnimation from "../components/LoadingAnimation.jsx";
+import {Button, Textarea, TextInput} from "flowbite-react";
 import {toast} from "react-toastify";
 import {ToastSettings} from "../data/ToastSettings.jsx";
 import * as emailjs from "@emailjs/browser";
+import {AiOutlineLoading} from "react-icons/ai";
 
 const Contact = () => {
     const [inputErrorName, setInputErrorName] = useState(null)
@@ -121,7 +121,6 @@ const Contact = () => {
         <>
             <div className="flex flex-col min-h-screen min-w-fit">
                 <Header/>
-                {isLoading && <LoadingAnimation/>}
                 <section className="bg-white dark:bg-black">
                     <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
                         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
@@ -182,12 +181,13 @@ const Contact = () => {
                                 />
                             </div>
                             <div className="flex justify-center items-center mx-auto">
-                                <button
+                                <Button
                                     type="submit"
-                                    className="bg-black dark:bg-white text-white dark:text-gray-900 py-3 px-5 text-sm font-medium text-center rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-                                >
+                                    className="text-white dark:text-gray-900 bg-black dark:bg-white hover:!bg-black dark:hover:!bg-white"
+                                    isProcessing={isLoading}
+                                    processingSpinner={<AiOutlineLoading className="h-6 w-6 animate-spin"/>}>
                                     Send message
-                                </button>
+                                </Button>
                             </div>
                         </form>
                     </div>
