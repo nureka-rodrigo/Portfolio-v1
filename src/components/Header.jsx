@@ -1,20 +1,24 @@
-import ThemeToggle from "./Theme-Toggle.jsx"
-import {Link, useLocation} from "react-router-dom";
-import LogoDark from "../assets/img/logo-dark.svg"
+import ThemeToggle from "./Theme-Toggle.jsx";
+import { Link, useLocation } from "react-router-dom";
+import Logo from "../assets/img/logo-dark.svg";
 
 const Header = () => {
-    let pathArray = useLocation().pathname.split("/")
-    let lastPart = pathArray[pathArray.length - 1]
+    let pathArray = useLocation().pathname.split("/");
+    let lastPart = pathArray[pathArray.length - 1];
 
     return (
         <header>
             <nav className="bg-white border-gray-200 px-4 lg:px-6 py-4 dark:bg-black">
                 <div className="flex flex-wrap items-center justify-center mx-auto max-w-screen-xl">
                     <Link className="flex absolute left-20" to="/">
-                        <img src={LogoDark} className="mr-3 h-6 sm:h-9 dark:invert" alt="Logo"/>
+                        <img
+                            src={Logo}
+                            className="mr-3 h-6 sm:h-9 dark:invert"
+                            alt="Logo"
+                        />
                     </Link>
                     <div className="flex items-center lg:order-2">
-                        <ThemeToggle/>
+                        <ThemeToggle />
                     </div>
                     <div className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1">
                         <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
@@ -51,12 +55,11 @@ const Header = () => {
                                 </Link>
                             </li>
                         </ul>
-
                     </div>
                 </div>
             </nav>
         </header>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;

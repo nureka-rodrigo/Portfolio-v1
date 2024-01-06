@@ -1,14 +1,20 @@
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 import { FaGithub } from "react-icons/fa";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
     const data = [
         {
             title: "ABC University",
             description: "Explore a comprehensive Student Management System designed to streamline administrative tasks and enhance the academic experience.",
-            tags: ["ReactJS", "TailwindCSS", "Python", "Django", "Django-Rest-Framework"],
+            tags: [
+                "ReactJS",
+                "TailwindCSS",
+                "Python",
+                "Django",
+                "Django-Rest-Framework",
+            ],
             link: "https://github.com/nureka-rodrigo/abc-university-frontend",
         },
         {
@@ -20,7 +26,15 @@ const Projects = () => {
         {
             title: "Yummy Kitchen",
             description: "Discover and share delightful recipes on Yummy Kitchen, a user-friendly platform connecting food enthusiasts from around the world.",
-            tags: ["HTML5", "CSS3", "JavaScript", "JSP", "Servlet", "MySQL", "Bootstrap"],
+            tags: [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "JSP",
+                "Servlet",
+                "MySQL",
+                "Bootstrap",
+            ],
             link: "https://github.com/nureka-rodrigo/Yummy-Kitchen",
         },
         {
@@ -35,20 +49,21 @@ const Projects = () => {
             tags: ["C"],
             link: "https://github.com/nureka-rodrigo/GPA-Calculator",
         },
-    ]
+    ];
 
     return (
         <>
             <div className="flex flex-col min-h-screen min-w-fit">
                 <Header />
-                <section className="bg-white dark:bg-black antialiased">
+                <section className="antialiased">
                     <div className="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
                         <div className="max-w-2xl mx-auto text-center">
                             <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white">
                                 Explore My Projects
                             </h2>
                             <p className="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
-                                Dive into a collection of my diverse projects and discover the creativity and innovation
+                                Dive into a collection of my diverse projects
+                                and discover the creativity and innovation
                                 behind each one.
                             </p>
                         </div>
@@ -71,12 +86,12 @@ const Projects = () => {
                                             </span>
                                         ))}
                                     </div>
-                                    <br/>
+                                    <br />
                                     <Link
                                         to={item.link}
                                         className="inline-flex w-full items-center justify-center rounded-lg bg-gray-800 px-4 py-2.5 text-white hover:bg-black focus:outline-none focus:ring-4 focus:ring-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 sm:w-auto"
                                     >
-                                        <FaGithub className="mr-3 h-7 w-7"/>
+                                        <FaGithub className="mr-3 h-7 w-7" />
                                         <div className="text-left text-white">
                                             <div className="-mt-1 font-sans text-center text-sm font-semibold">
                                                 View on the GitHub
@@ -88,7 +103,7 @@ const Projects = () => {
                         </div>
                     </div>
                 </section>
-                <Footer/>
+                <Footer />
             </div>
         </>
     );

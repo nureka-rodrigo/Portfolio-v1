@@ -7,4 +7,4 @@ export const ToastSettings = {
     draggable: true,
     progress: undefined,
     theme: "dark",
-}
+};
