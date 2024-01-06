@@ -186,7 +186,7 @@ const Contact = () => {
                             <div className="flex justify-center items-center mx-auto">
                                 <Button
                                     type="submit"
-                                    className="text-white dark:text-gray-900 bg-black dark:bg-white hover:!bg-black dark:hover:!bg-white"
+                                    className="text-white dark:text-gray-900 bg-gray-800 dark:bg-white hover:!bg-black dark:hover:!bg-white"
                                     isProcessing={isLoading}
                                     processingSpinner={<AiOutlineLoading className="h-6 w-6 animate-spin"/>}>
                                     Send message

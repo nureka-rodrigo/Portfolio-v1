@@ -1,6 +1,7 @@
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 import { FaGithub } from "react-icons/fa";
+import {Link} from "react-router-dom";
 
 const Projects = () => {
     const data = [
@@ -71,9 +72,9 @@ const Projects = () => {
                                         ))}
                                     </div>
                                     <br/>
-                                    <a
-                                        href={item.link}
-                                        className="inline-flex w-full items-center justify-center rounded-lg bg-gray-800 px-4 py-2.5 text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 sm:w-auto"
+                                    <Link
+                                        to={item.link}
+                                        className="inline-flex w-full items-center justify-center rounded-lg bg-gray-800 px-4 py-2.5 text-white hover:bg-black focus:outline-none focus:ring-4 focus:ring-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 sm:w-auto"
                                     >
                                         <FaGithub className="mr-3 h-7 w-7"/>
                                         <div className="text-left text-white">
@@ -81,7 +82,7 @@ const Projects = () => {
                                                 View on the GitHub
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                             ))}
                         </div>
