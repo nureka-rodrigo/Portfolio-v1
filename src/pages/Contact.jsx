@@ -186,7 +186,7 @@ const Contact = () => {
                             <div className="flex justify-center items-center mx-auto">
                                 <Button
                                     type="submit"
-                                    className="text-white dark:text-gray-900 bg-gray-800 dark:bg-white hover:!bg-black dark:hover:!bg-white"
+                                    className="text-white dark:text-gray-900 bg-gray-800 dark:bg-white hover:!bg-black dark:hover:!bg-gray-200"
                                     isProcessing={isLoading}
                                     processingSpinner={<AiOutlineLoading className="h-6 w-6 animate-spin"/>}>
                                     Send message
@@ -199,7 +199,7 @@ const Contact = () => {
                     </div>
                     <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
                         <div className="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
-                            <span className="text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white uppercase">Find me on</span>
+                            <span className="text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">Find me on</span>
                             <div
                                 className="flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between">
                                 <Link className="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
