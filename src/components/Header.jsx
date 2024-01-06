@@ -1,19 +1,17 @@
 import ThemeToggle from "./Theme-Toggle.jsx"
 import {Link, useLocation} from "react-router-dom";
-import LogoLight from "../assets/img/logo-light.svg"
 import LogoDark from "../assets/img/logo-dark.svg"
 
 const Header = () => {
     let pathArray = useLocation().pathname.split("/")
     let lastPart = pathArray[pathArray.length - 1]
-    const Theme = localStorage.theme
 
     return (
         <header>
             <nav className="bg-white border-gray-200 px-4 lg:px-6 py-4 dark:bg-black">
                 <div className="flex flex-wrap items-center justify-center mx-auto max-w-screen-xl">
                     <Link className="flex absolute left-20" to="/">
-                        <img src={Theme === "light" ? LogoDark : LogoLight} className="mr-3 h-6 sm:h-9" alt="Logo"/>
+                        <img src={LogoDark} className="mr-3 h-6 sm:h-9 dark:invert" alt="Logo"/>
                     </Link>
                     <div className="flex items-center lg:order-2">
                         <ThemeToggle/>
