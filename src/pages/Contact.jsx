@@ -6,6 +6,9 @@ import {toast} from "react-toastify";
 import {ToastSettings} from "../data/ToastSettings.jsx";
 import * as emailjs from "@emailjs/browser";
 import {AiOutlineLoading} from "react-icons/ai";
+import {FaGithub, FaInstagram, FaLinkedin} from "react-icons/fa";
+import {Link} from "react-router-dom";
+import {IoMail} from "react-icons/io5";
 
 const Contact = () => {
     const [inputErrorName, setInputErrorName] = useState(null)
@@ -104,7 +107,7 @@ const Contact = () => {
                         toast.success('Message received', {
                             ...ToastSettings
                         })
-                        console.log(response.text);
+                        console.log(response.text)
                         setIsLoading(false)
                     }
                 }, (error) => {
@@ -112,7 +115,7 @@ const Contact = () => {
                         ...ToastSettings
                     })
                     setIsLoading(false)
-                    console.log(error.text);
+                    console.log(error.text)
                 });
         }
     }
@@ -191,11 +194,38 @@ const Contact = () => {
                             </div>
                         </form>
                     </div>
+                    <div className="flex items-center justify-center">
+                        <hr className="border-t border-gray-300 w-3/4"/>
+                    </div>
+                    <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+                        <div className="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
+                            <span className="text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white uppercase">Find me on</span>
+                            <div
+                                className="flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between">
+                                <Link className="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
+                                      to="https://github.com/nureka-rodrigo">
+                                    <FaGithub className="h-8 w-8"/>
+                                </Link>
+                                <Link className="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
+                                      to="https://www.linkedin.com/in/nureka-rodrigo">
+                                    <FaLinkedin className="h-8 w-8"/>
+                                </Link>
+                                <Link className="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
+                                      to="https://www.instagram.com/nureka_rodrigo">
+                                    <FaInstagram className="h-8 w-8"/>
+                                </Link>
+                                <Link className="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400"
+                                      to="mailto:nurekadulshanmc@gmail.com">
+                                    <IoMail className="h-8 w-8"/>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <Footer/>
             </div>
         </>
-    );
-};
+    )
+}
 
 export default Contact;
