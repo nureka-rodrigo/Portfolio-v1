@@ -1,65 +1,187 @@
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
+import {useState} from "react";
+import {Textarea, TextInput} from "flowbite-react";
+import LoadingAnimation from "../components/LoadingAnimation.jsx";
+import {toast} from "react-toastify";
+import {ToastSettings} from "../data/ToastSettings.jsx";
+import * as emailjs from "@emailjs/browser";
 
 const Contact = () => {
+    const [inputErrorName, setInputErrorName] = useState(null)
+    const [inputErrorEmail, setInputErrorEmail] = useState(null)
+    const [inputErrorSubject, setInputErrorSubject] = useState(null)
+    const [inputErrorMessage, setInputErrorMessage] = useState(null)
+
+    const [name, setName] = useState(null)
+    const [email, setEmail] = useState(null)
+    const [subject, setSubject] = useState(null)
+    const [message, setMessage] = useState(null)
+
+    const [isLoading, setIsLoading] = useState(false)
+
+    const validateName = (e) => {
+        const data = e.target.value
+
+        if (data === "") {
+            setInputErrorName("This field can not be empty!")
+        } else {
+            setInputErrorName(null)
+        }
+    }
+
+    const validateEmail = (e) => {
+        const data = e.target.value
+
+        if (data === "") {
+            setInputErrorEmail("This field can not be empty!")
+        } else {
+            setInputErrorEmail(null)
+        }
+    }
+
+    const validateSubject = (e) => {
+        const data = e.target.value
+
+        if (data === "") {
+            setInputErrorSubject("This field can not be empty!")
+        } else {
+            setInputErrorSubject(null)
+        }
+    }
+
+    const validateMessage = (e) => {
+        const data = e.target.value
+
+        if (data === "") {
+            setInputErrorMessage("This field can not be empty!")
+        } else {
+            setInputErrorMessage(null)
+        }
+    }
+
+    const submitForm = (e) => {
+        e.preventDefault()
+        const data = Object.fromEntries(new FormData(e.target).entries())
+        const formData = new FormData(e.target)
+
+        if (data.from_name === "" && data.from_email === "" && data.subject === "" && data.message === "") {
+            setInputErrorName("This field can not be empty!")
+            setInputErrorEmail("This field can not be empty!")
+            setInputErrorSubject("This field can not be empty!")
+            setInputErrorMessage("This field can not be empty!")
+        } else if (data.from_name === "") {
+            setInputErrorName("This field can not be empty!")
+        } else if (data.from_email === "") {
+            setInputErrorEmail("This field can not be empty!")
+        } else if (data.subject === "") {
+            setInputErrorSubject("This field can not be empty!")
+        } else if (data.message === "") {
+            setInputErrorMessage("This field can not be empty!")
+        } else {
+            setInputErrorName(null)
+            setInputErrorEmail(null)
+            setInputErrorSubject(null)
+            setInputErrorMessage(null)
+
+            setName(formData.get('from_name'))
+            setEmail(formData.get('from_email'))
+            setSubject(formData.get('subject'))
+            setMessage(formData.get('message'))
+
+            setIsLoading(true)
+
+            const formParameters = {
+                from_name: name,
+                from_email: email,
+                subject: subject,
+                message: message
+            }
+
+            emailjs.send(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, formParameters, import.meta.env.VITE_PUBLIC_KEY)
+                .then((response) => {
+                    if (response.status === 200) {
+                        toast.success('Message received', {
+                            ...ToastSettings
+                        })
+                        console.log(response.text);
+                        setIsLoading(false)
+                    }
+                }, (error) => {
+                    toast.error('An error occurred', {
+                        ...ToastSettings
+                    })
+                    setIsLoading(false)
+                    console.log(error.text);
+                });
+        }
+    }
+
     return (
         <>
             <div className="flex flex-col min-h-screen min-w-fit">
-                <Header />
+                <Header/>
+                {isLoading && <LoadingAnimation/>}
                 <section className="bg-white dark:bg-black">
                     <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
                         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
                             Contact Me
                         </h2>
                         <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-                            I welcome the opportunity to connect with you. Whether you have inquiries about my work, collaboration proposals, or just want to say hello, feel free to reach out. I am always eager to engage with new ideas and projects.
+                            I welcome the opportunity to connect with you. Whether you have inquiries about my work,
+                            collaboration proposals, or just want to say hello, feel free to reach out. I am always
+                            eager to engage with new ideas and projects.
                         </p>
-                        <form action="#" className="space-y-8">
+                        <form className="space-y-8" onSubmit={(e) => submitForm(e)}>
                             <div>
-                                <label
-                                    htmlFor="email"
-                                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                                >
-                                    Your email
-                                </label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                                    placeholder="email@abc.com"
-                                    required
+                                <TextInput
+                                    type="text"
+                                    id="name"
+                                    name="from_name"
+                                    placeholder="Name"
+                                    helperText={
+                                        <span className="text-red-500">{inputErrorName}</span>
+                                    }
+                                    onChange={(e) => validateName(e)}
                                 />
                             </div>
                             <div>
-                                <label
-                                    htmlFor="subject"
-                                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                                >
-                                    Subject
-                                </label>
-                                <input
+                                <TextInput
+                                    type="email"
+                                    id="email"
+                                    name="from_email"
+                                    placeholder="Email"
+                                    helperText={
+                                        <span className="text-red-500">{inputErrorEmail}</span>
+                                    }
+                                    onChange={(e) => validateEmail(e)}
+                                />
+                            </div>
+                            <div>
+                                <TextInput
                                     type="text"
                                     id="subject"
-                                    className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-gray-500 focus:border-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                                    placeholder="Let me know how I can help you"
-                                    required
+                                    name="subject"
+                                    placeholder="Subject"
+                                    helperText={
+                                        <span className="text-red-500">{inputErrorSubject}</span>
+                                    }
+                                    onChange={(e) => validateSubject(e)}
                                 />
                             </div>
                             <div className="sm:col-span-2">
-                                <label
-                                    htmlFor="message"
-                                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                                >
-                                    Your message
-                                </label>
-                                <textarea
+                                <Textarea
                                     id="message"
+                                    name="message"
                                     rows="6"
-                                    className="block p-2.5 w-full text-sm text-gray-900 rounded-lg shadow-sm border border-gray-300 focus:ring-gray-500 focus:border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                    placeholder="Leave a comment..."
-                                ></textarea>
+                                    placeholder="Message"
+                                    helperText={
+                                        <span className="text-red-500">{inputErrorMessage}</span>
+                                    }
+                                    onChange={(e) => validateMessage(e)}
+                                />
                             </div>
-                            <div className="mx-auto">
+                            <div className="flex justify-center items-center mx-auto">
                                 <button
                                     type="submit"
                                     className="bg-black dark:bg-white text-white dark:text-gray-900 py-3 px-5 text-sm font-medium text-center rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
@@ -70,7 +192,7 @@ const Contact = () => {
                         </form>
                     </div>
                 </section>
-                <Footer />
+                <Footer/>
             </div>
         </>
     );
