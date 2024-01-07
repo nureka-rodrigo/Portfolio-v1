@@ -1,5 +1,5 @@
 const Resume = () => {
-    const pdfPath = "src/assets/resume/Resume-Nureka-Rodrigo.pdf";
+    const pdfPath = "Resume-Nureka-Rodrigo.pdf";
 
     return (
         <>
