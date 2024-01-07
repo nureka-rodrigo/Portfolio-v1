@@ -61,7 +61,7 @@ const Header = () => {
                             Resume
                         </Link>
                         <Link
-                            to="contact"
+                            to="/contact"
                             className={`text-sm font-semibold leading-6 block py-2 pr-4 pl-3 lg:text-primary-700 lg:p-0  text-gray-900 dark:text-white ${lastPart === "contact" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
                         >
                             Contact
