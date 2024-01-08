@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { SkillsLogos } from "../data/SkillsLogos.jsx";
+import { CertificatesLogos } from "../data/CertificatesLogos.js";
 
 const About = () => {
     const [activeTab, setActiveTab] = useState("Skills");
@@ -122,13 +123,14 @@ const About = () => {
                                 <div className="flex flex-col flex-1 gap-2">
                                     <h3 className="text-base font-medium leading-7 text-black dark:text-white">
                                         Secondary Education
-                                        <br/>
+                                        <br />
                                         <span className="font-normal text-slate-500">
                                             Ananda College - Colombo 10
                                         </span>
                                     </h3>
                                     <p className="text-slate-500">
-                                        G.C.E. Advanced Level Examination - 3C&apos;s
+                                        G.C.E. Advanced Level Examination -
+                                        3C&apos;s
                                     </p>
                                 </div>
                             </li>
@@ -142,13 +144,14 @@ const About = () => {
                                 <div className="flex flex-col flex-1 gap-2">
                                     <h3 className="text-base font-medium leading-7 text-black dark:text-white">
                                         Primary Education
-                                        <br/>
+                                        <br />
                                         <span className="font-normal text-slate-500">
                                             Mahanama College - Colombo 03
                                         </span>
                                     </h3>
                                     <p className="text-slate-500">
-                                        G.C.E. Ordinary Level Examination - 9A&apos;s
+                                        G.C.E. Ordinary Level Examination -
+                                        9A&apos;s
                                     </p>
                                 </div>
                             </li>
@@ -157,14 +160,44 @@ const About = () => {
                 );
             case "Certificates":
                 return (
-                    <div className="flex items-center justify-center">
-                        <p>Certificates Content Goes Here</p>
+                    <div className="flex items-center justify-center mx-auto w-3/4">
+                        <ul className="pt-4 pb-8">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-auto">
+                                {CertificatesLogos.map((logo, index) => (
+                                    <div key={index}>
+                                        <Link
+                                            to={logo.url}
+                                            target="_blank"
+                                            className="block"
+                                        >
+                                            <li className="relative pl-6 my-4 md:mx-8">
+                                                <span className="absolute left-0 z-10 flex items-center justify-center w-8 h-8 text-white -translate-x-1/2 rounded-full bg-white dark:bg-black">
+                                                    <img
+                                                        className="h-10 w-10"
+                                                        src={logo.src}
+                                                        alt={logo.alt}
+                                                    />
+                                                </span>
+                                                <div className="flex flex-col flex-1 gap-0">
+                                                    <h4 className="text-lg font-medium text-black dark:text-white">
+                                                        {logo.title}
+                                                    </h4>
+                                                    <p className="text-sm text-slate-500">
+                                                        {logo.issuedBy}
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        </Link>
+                                    </div>
+                                ))}
+                            </div>
+                        </ul>
                     </div>
                 );
             default:
                 return (
-                    <div className="flex items-center justify-center">
-                        <p>No conten</p>
+                    <div className="flex items-center justify-center mx-auto w-3/4">
+                        <p>No content</p>
                     </div>
                 );
         }
