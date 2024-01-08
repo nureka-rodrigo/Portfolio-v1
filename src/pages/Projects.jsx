@@ -8,33 +8,19 @@ const Projects = () => {
         {
             title: "ABC University",
             description: "Explore a comprehensive Student Management System designed to streamline administrative tasks and enhance the academic experience.",
-            tags: [
-                "ReactJS",
-                "TailwindCSS",
-                "Python",
-                "Django",
-                "Django-Rest-Framework",
-            ],
+            tags: ["ReactJS", "HTML5", "CSS3", "JavaScript", "TailwindCSS", "Python", "Django", "Django-Rest-Framework",],
             link: "https://github.com/nureka-rodrigo/abc-university-frontend",
         },
         {
             title: "Railway Management System",
             description: "Revolutionizing railway operations with a robust system that manages schedules, bookings, and passenger information seamlessly.",
-            tags: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap"],
+            tags: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap", "Payment-Getaway", "QR-Code-Generation", "SMS-Gateway",],
             link: "https://github.com/nureka-rodrigo/SLRMS",
         },
         {
             title: "Yummy Kitchen",
-            description: "Discover and share delightful recipes on Yummy Kitchen, a user-friendly platform connecting food enthusiasts from around the world.",
-            tags: [
-                "HTML5",
-                "CSS3",
-                "JavaScript",
-                "JSP",
-                "Servlet",
-                "MySQL",
-                "Bootstrap",
-            ],
+            description: "Discover and share delightful and revolutionary recipes on Yummy Kitchen, a user-friendly platform which connects food enthusiasts from all around the world to share recipes.",
+            tags: ["HTML5", "CSS3", "JavaScript", "Java", "JSP", "Servlet", "MySQL", "Bootstrap",],
             link: "https://github.com/nureka-rodrigo/Yummy-Kitchen",
         },
         {
@@ -46,7 +32,7 @@ const Projects = () => {
         {
             title: "GPA Calculator",
             description: "A simple, and straightforward GPA calculator empowers students to efficiently calculate their GPA by inputting the grades they've received, making academic assessment more accessible and user-friendly.",
-            tags: ["C"],
+            tags: ["C", "File-Handling"],
             link: "https://github.com/nureka-rodrigo/GPA-Calculator",
         },
     ];

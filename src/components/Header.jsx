@@ -1,7 +1,7 @@
 import {Fragment, useState} from 'react'
 import Logo from "/logo-dark.svg";
 import {Dialog, Popover, Transition} from '@headlessui/react'
-import ThemeToggle from "./Theme-Toggle.jsx";
+import ThemeToggle from "./ThemeToggle.jsx";
 import {Bars3Icon, XMarkIcon,} from '@heroicons/react/24/outline'
 import {Link, useLocation} from "react-router-dom";
 
