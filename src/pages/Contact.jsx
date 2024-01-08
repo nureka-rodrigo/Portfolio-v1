@@ -2,8 +2,6 @@ import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 import {useState} from "react";
 import {Button, Textarea, TextInput} from "flowbite-react";
-import {toast} from "react-toastify";
-import {ToastSettings} from "../data/ToastSettings.jsx";
 import * as emailjs from "@emailjs/browser";
 import {AiOutlineLoading} from "react-icons/ai";
 import {FaGithub, FaInstagram, FaLinkedin} from "react-icons/fa";
@@ -114,17 +112,10 @@ const Contact = () => {
                 .then(
                     (response) => {
                         if (response.status === 200) {
-                            toast.success("Message received", {
-                                ...ToastSettings,
-                            });
-                            console.log(formParameters);
                             setIsLoading(false);
                         }
                     },
                     (error) => {
-                        toast.error("An error occurred", {
-                            ...ToastSettings,
-                        });
                         setIsLoading(false);
                         console.log(error.text);
                     },
