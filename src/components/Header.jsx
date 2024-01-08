@@ -1,11 +1,11 @@
-import {useState} from 'react'
+import {Fragment, useState} from 'react'
 import Logo from "/logo-dark.svg";
-import {Dialog, Popover} from '@headlessui/react'
+import {Dialog, Popover, Transition} from '@headlessui/react'
 import ThemeToggle from "./Theme-Toggle.jsx";
 import {Bars3Icon, XMarkIcon,} from '@heroicons/react/24/outline'
 import {Link, useLocation} from "react-router-dom";
 
-export default function Header() {
+const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     let pathArray = useLocation().pathname.split("/");
@@ -31,16 +31,24 @@ export default function Header() {
                     </button>
                 </div>
                 <Popover.Group className="hidden lg:flex lg:gap-x-12">
-                    <Link to="/" className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${lastPart === "" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
+                    <Link to="/"
+                          className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${lastPart === "" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
                         Home
                     </Link>
-                    <Link to="/projects" className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${lastPart === "projects" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
+                    <Link to="/about"
+                          className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${lastPart === "about" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
+                        About
+                    </Link>
+                    <Link to="/projects"
+                          className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${lastPart === "projects" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
                         Projects
                     </Link>
-                    <Link to="/resume" className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${lastPart === "resume" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
+                    <Link to="/resume"
+                          className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${lastPart === "resume" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
                         Resume
                     </Link>
-                    <Link to="/contact" className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${lastPart === "contact" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
+                    <Link to="/contact"
+                          className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${lastPart === "contact" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
                         Contact
                     </Link>
                 </Popover.Group>
@@ -48,7 +56,19 @@ export default function Header() {
                     <ThemeToggle/>
                 </div>
             </nav>
+            <Transition.Root show={mobileMenuOpen} as={Fragment}>
             <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+                <Transition.Child
+                    as={Fragment}
+                    enter="ease-in-out duration-500"
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
+                    leave="ease-in-out duration-500"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
+                >
+                    <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"/>
+                </Transition.Child>
                 <div className="fixed inset-0 z-10"/>
                 <Dialog.Panel
                     className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
@@ -77,6 +97,12 @@ export default function Header() {
                                     Home
                                 </Link>
                                 <Link
+                                    to="/about"
+                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-50 ${lastPart === "about" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
+                                >
+                                    About
+                                </Link>
+                                <Link
                                     to="/projects"
                                     className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-50 ${lastPart === "projects" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
                                 >
@@ -99,6 +125,9 @@ export default function Header() {
                     </div>
                 </Dialog.Panel>
             </Dialog>
+            </Transition.Root>
         </header>
     )
 }
+
+export default Header;
