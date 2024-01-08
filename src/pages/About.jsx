@@ -47,8 +47,38 @@ const About = () => {
                 );
             case 'Experience':
                 return (
-                    <div className="flex items-center justify-center">
-                        <p>Skills Content Goes Here</p>
+                    <div className="flex items-center justify-center mx-auto w-3/4">
+                        <ul
+                            aria-label="Alternative changelog feed"
+                            role="feed"
+                            className="relative flex flex-col gap-12 py-12 pl-6 text-sm before:absolute before:top-0 before:left-6 before:h-full before:-translate-x-1/2 before:border before:border-dashed before:border-slate-200 after:absolute after:top-6 after:left-6 after:bottom-6 after:-translate-x-1/2 after:border after:border-slate-200 lg:pl-0 lg:before:left-[8.5rem] lg:after:left-[8.5rem]"
+                        >
+                            <li
+                                role="article"
+                                className="relative pl-6 before:absolute before:left-0 before:top-2 before:z-10 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-black dark:before:bg-white before:ring-2 before:ring-white lg:flex lg:gap-12 lg:pl-0 lg:before:left-[8.5rem]"
+                            >
+                                <h4 className="hidden text-base font-medium leading-7 text-slate-500 lg:block lg:w-28 lg:text-right">
+                                    2023-11-01
+                                </h4>
+                                <div className="flex flex-col flex-1 gap-2">
+                                    <h3 className="text-base font-medium leading-7 text-black dark:text-white">
+                                        Trainee Backend Developer
+                                        <span
+                                            className="font-medium text-slate-500 lg:hidden">&nbsp;-&nbsp;2023-01-21</span>
+                                        <br/>
+                                        <span
+                                            className="font-normal text-slate-600">CSI DevTeam - Uva Wellassa University</span>
+
+                                    </h3>
+                                    <p className="text-slate-500">
+                                        As a Trainee Backend Developer at Uva Wellassa University, I am currently
+                                        serving as the team leader for the development team in a Scrum environment. My
+                                        responsibilities include crafting and implementing backend logic to contribute
+                                        to the overall success of our projects.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 );
             case 'Education':
