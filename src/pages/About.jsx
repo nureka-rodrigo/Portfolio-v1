@@ -38,9 +38,9 @@ const About = () => {
         switch (activeTab) {
             case 'Skills':
                 return (
-                    <div className="flex flex-wrap items-center justify-center mx-auto mt-12 mb-4 w-2/4">
+                    <div className="flex flex-wrap items-center justify-center mx-auto mt-12 mb-4 w-3/4">
                         {SkillsLogos.map((logo, index) => (
-                            <img key={index} className="me-4 mb-4 md:mb-4" src={logo.src} height="40" width="40"
+                            <img key={index} className="me-4 mb-4 md:mb-4 h-10 w-10" src={logo.src}
                                  alt={logo.alt}/>
                         ))}
                     </div>
