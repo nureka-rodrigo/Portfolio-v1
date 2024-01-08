@@ -59,7 +59,7 @@ const About = () => {
                         >
                             <li
                                 role="article"
-                                className="relative pl-6 before:absolute before:left-0 before:top-2 before:z-10 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-black dark:before:bg-white before:ring-2 before:ring-white lg:flex lg:gap-12 lg:pl-0 lg:before:left-[8.5rem]"
+                                className="relative pl-6 before:absolute before:left-0 before:top-2 before:z-10 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-white dark:before:bg-black before:ring-2 before:ring-black dark:before:ring-white lg:flex lg:gap-12 lg:pl-0 lg:before:left-[8.5rem]"
                             >
                                 <h4 className="text-base font-medium leading-7 text-slate-500 lg:block lg:w-28 lg:text-right">
                                     2023-11-01
@@ -97,7 +97,7 @@ const About = () => {
                         >
                             <li
                                 role="article"
-                                className="relative pl-6 before:absolute before:left-0 before:top-2 before:z-10 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-black dark:before:bg-white before:ring-2 before:ring-white lg:flex lg:gap-12 lg:pl-0 lg:before:left-[8.5rem]"
+                                className="relative pl-6 before:absolute before:left-0 before:top-2 before:z-10 before:h-2 before:w-2 before:-translate-x-1/2 before:rounded-full before:bg-white dark:before:bg-black before:ring-2 before:ring-black dark:before:ring-white lg:flex lg:gap-12 lg:pl-0 lg:before:left-[8.5rem]"
                             >
                                 <h4 className="text-base font-medium leading-7 text-slate-500 lg:block lg:w-28 lg:text-right">
                                     2021
@@ -122,11 +122,14 @@ const About = () => {
                                 <div className="flex flex-col flex-1 gap-2">
                                     <h3 className="text-base font-medium leading-7 text-black dark:text-white">
                                         Secondary Education
-                                        <br />
+                                        <br/>
                                         <span className="font-normal text-slate-500">
                                             Ananda College - Colombo 10
                                         </span>
                                     </h3>
+                                    <p className="text-slate-500">
+                                        G.C.E. Advanced Level Examination - 3C&apos;s
+                                    </p>
                                 </div>
                             </li>
                             <li
@@ -139,11 +142,14 @@ const About = () => {
                                 <div className="flex flex-col flex-1 gap-2">
                                     <h3 className="text-base font-medium leading-7 text-black dark:text-white">
                                         Primary Education
-                                        <br />
+                                        <br/>
                                         <span className="font-normal text-slate-500">
                                             Mahanama College - Colombo 03
                                         </span>
                                     </h3>
+                                    <p className="text-slate-500">
+                                        G.C.E. Ordinary Level Examination - 9A&apos;s
+                                    </p>
                                 </div>
                             </li>
                         </ul>
