@@ -213,9 +213,9 @@ const Contact = () => {
                     </form>
                 </div>
                 <div className="flex items-center justify-center">
-                    <hr className="border-t border-gray-300 w-3/4"/>
+                    <hr className="border-t border-gray-300 w-3/4 max-w-screen-xl"/>
                 </div>
-                <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+                <div className="p-4 mx-auto max-w-screen-xl text-center lg:py-8">
                     <div className="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
                             <span className="text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
                                 Find me on

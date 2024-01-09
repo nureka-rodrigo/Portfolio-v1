@@ -39,7 +39,7 @@ const About = () => {
         switch (activeTab) {
             case "Skills":
                 return (
-                    <div className="flex flex-wrap items-center justify-center mx-auto mt-12 mb-4 w-3/4">
+                    <div className="flex flex-wrap items-center justify-center mx-auto w-3/4 p-3 max-w-screen-xl">
                         {SkillsLogos.map((logo, index) => (
                             <img
                                 key={index}
@@ -52,7 +52,7 @@ const About = () => {
                 );
             case "Experience":
                 return (
-                    <div className="flex items-center justify-center mx-auto w-3/4">
+                    <div className="flex items-center justify-center mx-auto w-3/4 p-3 max-w-screen-xl">
                         <ul
                             aria-label="Alternative changelog feed"
                             role="feed"
@@ -90,7 +90,7 @@ const About = () => {
                 );
             case "Education":
                 return (
-                    <div className="flex items-center justify-center mx-auto w-3/4">
+                    <div className="flex items-center justify-center mx-auto w-3/4 p-3 max-w-screen-xl">
                         <ul
                             aria-label="Alternative changelog feed"
                             role="feed"
@@ -163,8 +163,8 @@ const About = () => {
                 );
             case "Certificates":
                 return (
-                    <div className="flex items-center justify-center mx-auto w-3/4">
-                        <ul className="pt-4 pb-8">
+                    <div className="flex items-center justify-center mx-auto w-3/4 max-w-screen-xl">
+                        <ul className="p-3">
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-auto">
                                 {CertificatesLogos.map((logo, index) => (
                                     <div key={index}>
@@ -232,7 +232,7 @@ const About = () => {
                     </p>
                 </div>
                 <div>
-                    <div className="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 mx-auto w-3/4">
+                    <div className="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 mx-auto w-3/4 max-w-screen-xl">
                         <ul className="flex items-center justify-center flex-wrap -mb-px">
                             <Tab
                                 label="Skills"
