@@ -106,11 +106,14 @@ const About = () => {
                                 <div className="flex flex-col flex-1 gap-2">
                                     <h3 className="text-base font-medium leading-7 text-black dark:text-white">
                                         Higher Education
-                                        <br />
+                                        <br/>
                                         <span className="font-normal text-slate-500">
-                                            Uva Wellassa University - Badulla
+                                            Bachelor&apos;s in Computer Science & Technology
                                         </span>
                                     </h3>
+                                    <p className="text-slate-500">
+                                        Uva Wellassa University - Badulla
+                                    </p>
                                 </div>
                             </li>
                             <li
@@ -125,12 +128,12 @@ const About = () => {
                                         Secondary Education
                                         <br />
                                         <span className="font-normal text-slate-500">
-                                            Ananda College - Colombo 10
+                                            G.C.E. Advanced Level Examination -
+                                        3C&apos;s
                                         </span>
                                     </h3>
                                     <p className="text-slate-500">
-                                        G.C.E. Advanced Level Examination -
-                                        3C&apos;s
+                                        Ananda College - Colombo 10
                                     </p>
                                 </div>
                             </li>
@@ -146,12 +149,12 @@ const About = () => {
                                         Primary Education
                                         <br />
                                         <span className="font-normal text-slate-500">
-                                            Mahanama College - Colombo 03
+                                            G.C.E. Ordinary Level Examination -
+                                        9A&apos;s
                                         </span>
                                     </h3>
                                     <p className="text-slate-500">
-                                        G.C.E. Ordinary Level Examination -
-                                        9A&apos;s
+                                        Mahanama College - Colombo 03
                                     </p>
                                 </div>
                             </li>

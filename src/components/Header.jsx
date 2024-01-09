@@ -92,31 +92,31 @@ const Header = () => {
                             <div className="space-y-2 py-6">
                                 <Link
                                     to="/"
-                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-50 ${lastPart === "" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
+                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${lastPart === "" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
                                 >
                                     Home
                                 </Link>
                                 <Link
                                     to="/about"
-                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-50 ${lastPart === "about" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
+                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${lastPart === "about" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
                                 >
                                     About
                                 </Link>
                                 <Link
                                     to="/projects"
-                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-50 ${lastPart === "projects" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
+                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${lastPart === "projects" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
                                 >
                                     Projects
                                 </Link>
                                 <Link
                                     to="/resume"
-                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-50 ${lastPart === "resume" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
+                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${lastPart === "resume" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
                                 >
                                     Resume
                                 </Link>
                                 <Link
                                     to="/contact"
-                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white hover:bg-gray-50 ${lastPart === "contact" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
+                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${lastPart === "contact" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
                                 >
                                     Contact
                                 </Link>
