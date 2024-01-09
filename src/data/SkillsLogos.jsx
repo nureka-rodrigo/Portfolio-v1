@@ -40,16 +40,20 @@ export const SkillsLogos = [
         alt: "react logo",
     },
     {
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-        alt: "nodejs logo",
-    },
-    {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
         alt: "spring logo",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
         alt: "django logo",
+    },
+    {
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        alt: "nodejs logo",
+    },
+    {
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/composer/composer-original.svg",
+        alt: "composer logo",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",

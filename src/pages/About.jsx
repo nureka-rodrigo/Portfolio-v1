@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { SkillsLogos } from "../data/SkillsLogos.jsx";
-import { CertificatesLogos } from "../data/CertificatesLogos.js";
+import { CertificatesLogos } from "../data/CertificatesLogos.jsx";
 
 const About = () => {
     const [activeTab, setActiveTab] = useState("Skills");
@@ -43,7 +43,7 @@ const About = () => {
                         {SkillsLogos.map((logo, index) => (
                             <img
                                 key={index}
-                                className="me-4 mb-4 md:mb-4 h-10 w-10"
+                                className={`me-4 mb-4 md:mb-4 h-10 w-10 ${logo.alt === "microsoft sql server logo" ? 'dark:invert' : ''}`}
                                 src={logo.src}
                                 alt={logo.alt}
                             />
