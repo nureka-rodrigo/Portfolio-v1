@@ -9,13 +9,6 @@ export const CertificatesLogos = [
     {
         src: "https://www.svgrepo.com/show/448278/cisco.svg",
         alt: "cisco logo",
-        title: "Network Addressing and Basic Troubleshooting",
-        issuedBy: "Cisco",
-        url: "https://www.credly.com/badges/e1805f34-7854-4780-9ef0-d5b2651dbed1/public_url",
-    },
-    {
-        src: "https://www.svgrepo.com/show/448278/cisco.svg",
-        alt: "cisco logo",
         title: "CCNA: Switching, Routing, and Wireless Essentials",
         issuedBy: "Cisco",
         url: "https://www.credly.com/badges/b4a7f4e0-ef31-42de-bbd4-81f8056f2622/public_url",
@@ -23,9 +16,9 @@ export const CertificatesLogos = [
     {
         src: "https://www.svgrepo.com/show/448278/cisco.svg",
         alt: "cisco logo",
-        title: "Introduction to Cybersecurity",
+        title: "CCNA: Introduction to Networks",
         issuedBy: "Cisco",
-        url: "https://www.credly.com/badges/f009f1c7-0a0d-4411-881b-013ccd21f2ae/public_url",
+        url: "https://www.credly.com/badges/edfa3ec6-a90a-4766-b594-702ae6e45fe3/public_url",
     },
     {
         src: "https://www.svgrepo.com/show/448278/cisco.svg",
@@ -51,20 +44,6 @@ export const CertificatesLogos = [
     {
         src: "https://www.svgrepo.com/show/448278/cisco.svg",
         alt: "cisco logo",
-        title: "Networking Devices and Initial Configuration",
-        issuedBy: "Cisco",
-        url: "https://www.credly.com/badges/ffb7e9ab-a8d6-4efb-bd56-282d32110b79/public_url",
-    },
-    {
-        src: "https://www.svgrepo.com/show/448278/cisco.svg",
-        alt: "cisco logo",
-        title: "Networking Basics",
-        issuedBy: "Cisco",
-        url: "https://www.credly.com/badges/ad7e3112-1b41-48b7-881b-4ab30f4f8b22/public_url",
-    },
-    {
-        src: "https://www.svgrepo.com/show/448278/cisco.svg",
-        alt: "cisco logo",
         title: "Network Support and Security",
         issuedBy: "Cisco",
         url: "https://www.credly.com/badges/e0393e89-e305-4d64-9162-d0422d65b2b8/public_url",
@@ -75,6 +54,35 @@ export const CertificatesLogos = [
         title: "Network Addressing and Basic Troubleshooting",
         issuedBy: "Cisco",
         url: "https://www.credly.com/badges/e1805f34-7854-4780-9ef0-d5b2651dbed1/public_url",
+    },
+
+    {
+        src: "https://www.svgrepo.com/show/448278/cisco.svg",
+        alt: "cisco logo",
+        title: "Introduction to Cybersecurity",
+        issuedBy: "Cisco",
+        url: "https://www.credly.com/badges/f009f1c7-0a0d-4411-881b-013ccd21f2ae/public_url",
+    },
+    {
+        src: "https://www.svgrepo.com/show/448278/cisco.svg",
+        alt: "cisco logo",
+        title: "Network Addressing and Basic Troubleshooting",
+        issuedBy: "Cisco",
+        url: "https://www.credly.com/badges/e1805f34-7854-4780-9ef0-d5b2651dbed1/public_url",
+    },
+    {
+        src: "https://www.svgrepo.com/show/448278/cisco.svg",
+        alt: "cisco logo",
+        title: "Networking Devices and Initial Configuration",
+        issuedBy: "Cisco",
+        url: "https://www.credly.com/badges/ffb7e9ab-a8d6-4efb-bd56-282d32110b79/public_url",
+    },
+    {
+        src: "https://www.svgrepo.com/show/448278/cisco.svg",
+        alt: "cisco logo",
+        title: "Networking Basics",
+        issuedBy: "Cisco",
+        url: "https://www.credly.com/badges/ad7e3112-1b41-48b7-881b-4ab30f4f8b22/public_url",
     },
     {
         src: "https://www.svgrepo.com/show/448278/cisco.svg",
