@@ -2,41 +2,9 @@ import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import {ProjectData} from "../data/ProjectData.jsx";
 
 const Projects = () => {
-    const data = [
-        {
-            title: "ABC University",
-            description: "Explore a comprehensive Student Management System designed to streamline administrative tasks and enhance the academic experience.",
-            tags: ["ReactJS", "HTML5", "CSS3", "JavaScript", "TailwindCSS", "Python", "Django", "Django-Rest-Framework",],
-            link: "https://github.com/nureka-rodrigo/abc-university-frontend",
-        },
-        {
-            title: "Railway Management System",
-            description: "Revolutionizing railway operations with a robust system that manages schedules, bookings, and passenger information seamlessly.",
-            tags: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap", "Payment-Getaway", "QR-Code-Generation", "SMS-Gateway",],
-            link: "https://github.com/nureka-rodrigo/SLRMS",
-        },
-        {
-            title: "Yummy Kitchen",
-            description: "Discover and share delightful and revolutionary recipes on Yummy Kitchen, a user-friendly platform which connects food enthusiasts from all around the world to share recipes.",
-            tags: ["HTML5", "CSS3", "JavaScript", "Java", "JSP", "Servlet", "MySQL", "Bootstrap",],
-            link: "https://github.com/nureka-rodrigo/Yummy-Kitchen",
-        },
-        {
-            title: "ABC Hotel",
-            description: "A Hotel Management System that simplifies the process of managing hotel operations and provides a seamless experience for guests.",
-            tags: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap"],
-            link: "https://github.com/nureka-rodrigo/ABC-Hotel",
-        },
-        {
-            title: "GPA Calculator",
-            description: "A simple, and straightforward GPA calculator empowers students to efficiently calculate their GPA by inputting the grades they've received, making academic assessment more accessible and user-friendly.",
-            tags: ["C", "File-Handling"],
-            link: "https://github.com/nureka-rodrigo/GPA-Calculator",
-        },
-    ];
-
     return (
         <>
             <div className="flex flex-col min-h-screen min-w-fit">
@@ -54,7 +22,7 @@ const Projects = () => {
                             </p>
                         </div>
                         <div className="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-                            {data.map((item, index) => (
+                            {ProjectData.map((item, index) => (
                                 <div key={index} className="space-y-4">
                                     <h3 className="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
                                         {item.title}
