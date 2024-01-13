@@ -7,7 +7,7 @@ const Resume = () => {
                 src={pdfPath}
                 type="application/pdf"
                 width="100%"
-                className="h-screen"
+                className="min-h-screen"
             />
         </>
     );

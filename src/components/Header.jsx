@@ -43,7 +43,7 @@ const Header = () => {
                           className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${lastPart === "projects" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
                         Projects
                     </Link>
-                    <Link to="/resume"
+                    <Link to="/resume" target={"_blank"}
                           className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${lastPart === "resume" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
                         Resume
                     </Link>
