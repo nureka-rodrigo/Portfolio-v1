@@ -52,6 +52,10 @@ export const SkillsLogos = [
         alt: "django logo",
     },
     {
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
+        alt: "laravel logo",
+    },
+    {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
         alt: "nodejs logo",
     },
