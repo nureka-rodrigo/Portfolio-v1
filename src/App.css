@@ -59,7 +59,3 @@
 .pulse-item:hover {
   animation: pulse 1s ease-in-out;
 }
-
-.pulse-infinite {
-  animation: pulse 1s infinite;
-}

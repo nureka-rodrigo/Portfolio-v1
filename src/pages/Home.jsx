@@ -12,9 +12,11 @@ const Home = () => {
                         <div className="flex flex-col items-start pl-0 xl:pl-0 2xl:pl-36">
                             <h1 className="text-4xl sm:text-8xl font-bold text-black dark:text-white mb-5 sm:mb-10">
                                 Hello,
-                            </h1>
-                            <h1 className="text-4xl sm:text-8xl font-bold text-black dark:text-white mb-5 sm:mb-10">
-                                I’m Nureka Rodrigo
+                                <br />
+                                I’m&nbsp;
+                                <span className="animate-pulse">
+                                    Nureka Rodrigo
+                                </span>
                             </h1>
                             <h1 className="text-xl sm:text-3xl font-bold text-black dark:text-white mb-5 sm:mb-10">
                                 Backend Developer

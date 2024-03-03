@@ -16,7 +16,7 @@ const LandingPage = () => {
     return (
         <div className="flex justify-center items-center min-h-screen">
             <img
-                className="h-16 w-auto dark:invert pulse-infinite"
+                className="h-16 w-auto dark:invert animate-pulse"
                 src={Logo}
                 alt="Landing Logo"
             />
