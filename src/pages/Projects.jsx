@@ -1,6 +1,5 @@
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
-import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import {ProjectData} from "../data/ProjectData.jsx";
 
@@ -24,40 +23,52 @@ const Projects = () => {
                         <div className="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
                             {ProjectData.map((item, index) => (
                                 <div key={index} className="space-y-4">
-                                    <h3 className="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
-                                        {item.title}
-                                    </h3>
-                                    <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
-                                        {item.description}
-                                    </p>
-                                    <div className="space-x-2">
-                                        {item.tags.map((tag, tagIndex) => (
-                                            <span
-                                                key={tagIndex}
-                                                className="my-2 bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"
-                                            >
+                                    <div className="relative flex flex-col text-gray-900 dark:text-white bg-white dark:bg-black shadow-md dark:shadow-light bg-clip-border rounded-xl w-auto">
+                                        <div
+                                            className="relative mx-4 mt-4 overflow-hidden bg-white bg-clip-border rounded-xl">
+                                            <img
+                                                src={item.img}
+                                                alt="card-image" className="object-cover w-full h-full"/>
+                                        </div>
+                                        <div className="p-6">
+                                            <div className="flex items-center justify-between mb-2">
+                                                <p className="block text-base antialiased font-medium leading-relaxed">
+                                                    {item.title}
+                                                </p>
+                                            </div>
+                                            <p className="block text-sm antialiased font-normal leading-normal opacity-75">
+                                                {item.description}
+                                            </p>
+                                        </div>
+                                        <div className="space-x-2">
+                                            {item.tags.map((tag, tagIndex) => (
+                                                <span
+                                                    key={tagIndex}
+                                                    className="my-2 bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"
+                                                >
                                                 {tag}
                                             </span>
-                                        ))}
-                                    </div>
-                                    <br />
-                                    <Link
-                                        to={item.link}
-                                        className="inline-flex w-full items-center justify-center rounded-lg bg-gray-800 px-4 py-2.5 text-white hover:bg-black focus:outline-none focus:ring-4 focus:ring-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 sm:w-auto"
-                                    >
-                                        <FaGithub className="mr-3 h-7 w-7" />
-                                        <div className="text-left text-white">
-                                            <div className="-mt-1 font-sans text-center text-sm font-semibold">
-                                                View on the GitHub
-                                            </div>
+                                            ))}
                                         </div>
-                                    </Link>
+                                        <div className="p-6 pt-0">
+                                            <Link
+                                                to={item.link}
+                                                target="_blank"
+                                            >
+                                            <button
+                                                className="text-gray-900 dark:text-white align-middle select-none font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg shadow-gray-900/10 hover:shadow-gray-900/20 focus:opacity-[0.85] active:opacity-[0.85] active:shadow-none block w-full bg-blue-gray-900/10 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
+                                                type="button">
+                                                View on GitHub
+                                            </button>
+                                            </Link>
+                                        </div>
+                                    </div>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </section>
-                <Footer className="mt-auto" />
+                <Footer className="mt-auto"/>
             </div>
         </>
     );

@@ -8,7 +8,11 @@ export default {
         "./node_modules/flowbite/**/*.js",
     ],
     theme: {
-        extend: {},
+        extend: {
+            boxShadow: {
+                'light': '0 4px 6px 0 rgba(255, 255, 255, 0.1), 0 1px 3px 0 rgba(255, 255, 255, 0.08)',
+            },
+        },
         fontFamily: {
             body: [
                 "Inter",
@@ -44,6 +48,11 @@ export default {
                 "Segoe UI Symbol",
                 "Noto Color Emoji",
             ],
+        },
+    },
+    variants: {
+        extend: {
+            boxShadow: ['dark'],
         },
     },
     plugins: [
