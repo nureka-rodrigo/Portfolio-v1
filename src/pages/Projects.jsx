@@ -9,18 +9,18 @@ const Projects = () => {
         <>
             <div className="flex flex-col min-h-screen min-w-fit">
                 <Header />
+                <div className="py-8 lg:pt-16 px-4 mx-auto max-w-screen-md">
+                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+                        Explore My Projects
+                    </h2>
+                    <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
+                        Dive into a collection of my diverse projects
+                        and discover the creativity and innovation
+                        behind each one.
+                    </p>
+                </div>
                 <section className="antialiased">
-                    <div className="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
-                        <div className="max-w-2xl mx-auto text-center">
-                            <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white">
-                                Explore My Projects
-                            </h2>
-                            <p className="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
-                                Dive into a collection of my diverse projects
-                                and discover the creativity and innovation
-                                behind each one.
-                            </p>
-                        </div>
+                    <div className="max-w-screen-xl px-4 pb-8 mx-auto lg:px-6 sm:pb-16 lg:pb-24">
                         <div className="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
                             {ProjectData.map((item, index) => (
                                 <div key={index} className="space-y-4">
