@@ -14,9 +14,9 @@ const Header = () => {
     return (
         <header>
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-                <div className="flex lg:flex-1">
-                    <Link to="#" className="-m-1.5 p-1.5">
-                        <span className="sr-only">Your Company</span>
+                <div className="flex lg:flex-1 pulse-item">
+                    <Link to="/" className="-m-1.5 p-1.5">
+                        <span className="sr-only">Nureka Rodrigo</span>
                         <img className="h-8 w-auto dark:invert" src={Logo} alt="Brand"/>
                     </Link>
                 </div>
@@ -32,23 +32,23 @@ const Header = () => {
                 </div>
                 <Popover.Group className="hidden lg:flex lg:gap-x-12">
                     <Link to="/"
-                          className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${lastPart === "" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
+                          className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white pulse-item ${lastPart === "" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
                         Home
                     </Link>
                     <Link to="/about"
-                          className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${lastPart === "about" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
+                          className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white pulse-item ${lastPart === "about" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
                         About
                     </Link>
                     <Link to="/projects"
-                          className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${lastPart === "projects" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
+                          className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white pulse-item ${lastPart === "projects" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
                         Projects
                     </Link>
                     <Link to="/resume" target={"_blank"}
-                          className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${lastPart === "resume" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
+                          className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white pulse-item ${lastPart === "resume" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
                         Resume
                     </Link>
                     <Link to="/contact"
-                          className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${lastPart === "contact" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
+                          className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white pulse-item ${lastPart === "contact" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
                         Contact
                     </Link>
                 </Popover.Group>
@@ -92,31 +92,31 @@ const Header = () => {
                             <div className="space-y-2 py-6">
                                 <Link
                                     to="/"
-                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${lastPart === "" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
+                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white pulse-item ${lastPart === "" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
                                 >
                                     Home
                                 </Link>
                                 <Link
                                     to="/about"
-                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${lastPart === "about" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
+                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white pulse-item ${lastPart === "about" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
                                 >
                                     About
                                 </Link>
                                 <Link
                                     to="/projects"
-                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${lastPart === "projects" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
+                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white pulse-item ${lastPart === "projects" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
                                 >
                                     Projects
                                 </Link>
                                 <Link
                                     to="/resume"
-                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${lastPart === "resume" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
+                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white pulse-item ${lastPart === "resume" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
                                 >
                                     Resume
                                 </Link>
                                 <Link
                                     to="/contact"
-                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${lastPart === "contact" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
+                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white pulse-item ${lastPart === "contact" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
                                 >
                                     Contact
                                 </Link>

@@ -44,7 +44,7 @@ const About = () => {
                         {SkillsLogos.map((logo, index) => (
                             <img
                                 key={index}
-                                className="me-4 mb-4 md:mb-4 h-10 w-10"
+                                className="me-4 mb-4 md:mb-4 h-10 w-10 pulse-item"
                                 src={logo.src}
                                 alt={logo.alt}
                             />
@@ -168,7 +168,7 @@ const About = () => {
                         <ul className="p-3">
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-auto">
                                 {CertificatesLogos.map((logo, index) => (
-                                    <div key={index}>
+                                    <div key={index} className="pulse-item">
                                         <Link
                                             to={logo.url}
                                             target="_blank"

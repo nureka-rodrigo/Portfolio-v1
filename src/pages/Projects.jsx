@@ -23,7 +23,7 @@ const Projects = () => {
                     <div className="max-w-screen-xl px-4 pb-8 mx-auto lg:px-6 sm:pb-16 lg:pb-24">
                         <div className="grid grid-cols-1 mt-12 text-center sm:mt-16 gap-x-20 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
                             {ProjectData.map((item, index) => (
-                                <div key={index} className="space-y-4">
+                                <div key={index} className="space-y-4 pulse-item">
                                     <div className="relative flex flex-col text-gray-900 dark:text-white bg-white dark:bg-black shadow-md dark:shadow-light bg-clip-border rounded-xl w-auto">
                                         <div
                                             className="relative mx-4 mt-4 overflow-hidden bg-white bg-clip-border rounded-xl">
