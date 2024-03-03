@@ -43,7 +43,7 @@ const About = () => {
                         {SkillsLogos.map((logo, index) => (
                             <img
                                 key={index}
-                                className={`me-4 mb-4 md:mb-4 h-10 w-10 ${logo.alt === "microsoft sql server logo" ? 'dark:invert' : ''}`}
+                                className="me-4 mb-4 md:mb-4 h-10 w-10"
                                 src={logo.src}
                                 alt={logo.alt}
                             />
