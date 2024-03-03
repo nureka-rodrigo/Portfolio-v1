@@ -1,5 +1,6 @@
 import "./App.css";
 import {Route, Routes} from "react-router-dom";
+import LandingPage from "./pages/Landing.jsx";
 import Home from "./pages/Home.jsx";
 import Projects from "./pages/Projects.jsx";
 import Resume from "./pages/Resume.jsx";
@@ -24,7 +25,8 @@ function App() {
             />
             <div className="bg-white dark:bg-black">
                 <Routes>
-                    <Route path={"/"} element={<Home/>}/>
+                    <Route path={"/"} element={<LandingPage/>}/>
+                    <Route path={"home"} element={<Home/>}/>
                     <Route path={"about"} element={<About/>}/>
                     <Route path={"projects"} element={<Projects/>}/>
                     <Route path={"resume"} element={<Resume/>}/>

@@ -31,8 +31,8 @@ const Header = () => {
                     </button>
                 </div>
                 <Popover.Group className="hidden lg:flex lg:gap-x-12">
-                    <Link to="/"
-                          className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white pulse-item ${lastPart === "" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
+                    <Link to="/home"
+                          className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white pulse-item ${lastPart === "home" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}>
                         Home
                     </Link>
                     <Link to="/about"
@@ -91,8 +91,8 @@ const Header = () => {
                         <div className="-my-6 divide-y divide-gray-500/10">
                             <div className="space-y-2 py-6">
                                 <Link
-                                    to="/"
-                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white pulse-item ${lastPart === "" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
+                                    to="/home"
+                                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white pulse-item ${lastPart === "home" ? "rounded-none border-b-2 border-black dark:border-white" : ""}`}
                                 >
                                     Home
                                 </Link>
