@@ -72,9 +72,9 @@ const Header = () => {
                 <div className="fixed inset-0 z-10"/>
                 <Dialog.Panel
                     className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between pulse-item">
                         <Link to="/" className="-m-1.5 p-1.5">
-                            <span className="sr-only">Your Company</span>
+                            <span className="sr-only">Nureka Rodrigo</span>
                             <img className="h-8 w-auto dark:invert" src={Logo} alt="Brand"/>
                         </Link>
                         <ThemeToggle/>
