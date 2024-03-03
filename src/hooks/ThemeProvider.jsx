@@ -1,4 +1,4 @@
-import {createContext, useContext, useEffect, useState} from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 const ThemeContext = createContext(undefined);
@@ -7,9 +7,9 @@ export const useTheme = () => {
     return useContext(ThemeContext);
 };
 
-export const ThemeProvider = ({children}) => {
+export const ThemeProvider = ({ children }) => {
     const [currentTheme, setCurrentTheme] = useState(
-        localStorage.theme === "dark" ? "dark" : "light"
+        localStorage.theme === "dark" ? "dark" : "light",
     );
 
     useEffect(() => {
@@ -20,10 +20,16 @@ export const ThemeProvider = ({children}) => {
                     window.matchMedia("(prefers-color-scheme: dark)").matches)
             ) {
                 document.documentElement.classList.add("dark");
-                document.documentElement.style.setProperty('--bg-color', '#fff');
+                document.documentElement.style.setProperty(
+                    "--bg-color",
+                    "#fff",
+                );
             } else {
                 document.documentElement.classList.remove("dark");
-                document.documentElement.style.setProperty('--bg-color', '#000');
+                document.documentElement.style.setProperty(
+                    "--bg-color",
+                    "#000",
+                );
             }
         };
 
@@ -37,7 +43,7 @@ export const ThemeProvider = ({children}) => {
     };
 
     return (
-        <ThemeContext.Provider value={{currentTheme, toggleTheme}}>
+        <ThemeContext.Provider value={{ currentTheme, toggleTheme }}>
             {children}
         </ThemeContext.Provider>
     );

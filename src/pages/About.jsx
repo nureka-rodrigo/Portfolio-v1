@@ -107,9 +107,10 @@ const About = () => {
                                 <div className="flex flex-col flex-1 gap-2">
                                     <h3 className="text-base font-medium leading-7 text-black dark:text-white">
                                         Higher Education
-                                        <br/>
+                                        <br />
                                         <span className="font-normal text-slate-500">
-                                            Bachelor&apos;s in Computer Science & Technology
+                                            Bachelor&apos;s in Computer Science
+                                            & Technology
                                         </span>
                                     </h3>
                                     <p className="text-slate-500">
@@ -130,7 +131,7 @@ const About = () => {
                                         <br />
                                         <span className="font-normal text-slate-500">
                                             G.C.E. Advanced Level Examination -
-                                        3C&apos;s
+                                            3C&apos;s
                                         </span>
                                     </h3>
                                     <p className="text-slate-500">
@@ -151,7 +152,7 @@ const About = () => {
                                         <br />
                                         <span className="font-normal text-slate-500">
                                             G.C.E. Ordinary Level Examination -
-                                        9A&apos;s
+                                            9A&apos;s
                                         </span>
                                     </h3>
                                     <p className="text-slate-500">
