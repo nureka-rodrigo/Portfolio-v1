@@ -7,6 +7,7 @@ import {AiOutlineLoading} from "react-icons/ai";
 import {FaGithub, FaInstagram, FaLinkedin} from "react-icons/fa";
 import {Link} from "react-router-dom";
 import {IoMail} from "react-icons/io5";
+import Transition from "../components/PageTransition.jsx";
 
 const Contact = () => {
     const [inputErrorName, setInputErrorName] = useState(null);
@@ -255,4 +256,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default Transition(Contact);

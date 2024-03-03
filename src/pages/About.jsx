@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { SkillsLogos } from "../data/SkillsLogos.jsx";
 import { CertificatesLogos } from "../data/CertificatesLogos.jsx";
+import Transition from "../components/PageTransition.jsx";
 
 const About = () => {
     const [activeTab, setActiveTab] = useState("Skills");
@@ -264,4 +265,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default Transition(About);

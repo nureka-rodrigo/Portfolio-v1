@@ -1,5 +1,6 @@
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
+import Transition from "../components/PageTransition.jsx";
 
 const Home = () => {
     return (
@@ -21,4 +22,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Transition(Home);
