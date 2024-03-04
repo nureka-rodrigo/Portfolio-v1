@@ -1,9 +1,10 @@
-import { Fragment, useState } from "react";
+import {Fragment, useState} from "react";
 import Logo from "/logo-dark.svg";
-import { Dialog, Popover, Transition } from "@headlessui/react";
+import {Dialog, Popover, Transition} from "@headlessui/react";
 import ThemeToggle from "./ThemeToggle.jsx";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Link, useLocation } from "react-router-dom";
+import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
+import {Link, useLocation} from "react-router-dom";
+import {motion} from "framer-motion";
 
 const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -41,60 +42,70 @@ const Header = () => {
                     </button>
                 </div>
                 <Popover.Group className="hidden lg:flex lg:gap-x-12">
-                    <Link
-                        to="/home"
-                        className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white pulse-item ${
-                            lastPart === "home"
-                                ? "rounded-none border-b-2 border-black dark:border-white"
-                                : ""
-                        }`}
-                    >
-                        Home
-                    </Link>
-                    <Link
-                        to="/about"
-                        className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white pulse-item ${
-                            lastPart === "about"
-                                ? "rounded-none border-b-2 border-black dark:border-white"
-                                : ""
-                        }`}
-                    >
-                        About
-                    </Link>
-                    <Link
-                        to="/projects"
-                        className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white pulse-item ${
-                            lastPart === "projects"
-                                ? "rounded-none border-b-2 border-black dark:border-white"
-                                : ""
-                        }`}
-                    >
-                        Projects
-                    </Link>
-                    <Link
-                        to="/resume"
-                        target={"_blank"}
-                        className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white pulse-item ${
-                            lastPart === "resume"
-                                ? "rounded-none border-b-2 border-black dark:border-white"
-                                : ""
-                        }`}
-                    >
-                        Resume
-                    </Link>
-                    <Link
-                        to="/contact"
-                        className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white pulse-item ${
-                            lastPart === "contact"
-                                ? "rounded-none border-b-2 border-black dark:border-white"
-                                : ""
-                        }`}
-                    >
-                        Contact
-                    </Link>
+                    <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+                        <Link
+                            to="/home"
+                            className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${
+                                lastPart === "home"
+                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                    : ""
+                            }`}
+                        >
+                            Home
+                        </Link>
+                    </motion.div>
+                    <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+                        <Link
+                            to="/about"
+                            className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${
+                                lastPart === "about"
+                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                    : ""
+                            }`}
+                        >
+                            About
+                        </Link>
+                    </motion.div>
+                    <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+                        <Link
+                            to="/projects"
+                            className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${
+                                lastPart === "projects"
+                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                    : ""
+                            }`}
+                        >
+                            Projects
+                        </Link>
+                    </motion.div>
+                    <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+                        <Link
+                            to="/resume"
+                            target={"_blank"}
+                            className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${
+                                lastPart === "resume"
+                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                    : ""
+                            }`}
+                        >
+                            Resume
+                        </Link>
+                    </motion.div>
+                    <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+                        <Link
+                            to="/contact"
+                            className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${
+                                lastPart === "contact"
+                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                    : ""
+                            }`}
+                        >
+                            Contact
+                        </Link>
+                    </motion.div>
                 </Popover.Group>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <ThemeToggle />
+                    <ThemeToggle/>
                 </div>
             </nav>
             <Transition.Root show={mobileMenuOpen} as={Fragment}>
@@ -113,10 +124,11 @@ const Header = () => {
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                     >
-                        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+                        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"/>
                     </Transition.Child>
-                    <div className="fixed inset-0 z-10" />
-                    <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    <div className="fixed inset-0 z-10"/>
+                    <Dialog.Panel
+                        className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                         <div className="flex items-center justify-between pulse-item">
                             <Link to="/" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Nureka Rodrigo</span>
@@ -126,7 +138,7 @@ const Header = () => {
                                     alt="Brand"
                                 />
                             </Link>
-                            <ThemeToggle />
+                            <ThemeToggle/>
                             <button
                                 type="button"
                                 className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -142,56 +154,66 @@ const Header = () => {
                         <div className="mt-6 flow-root">
                             <div className="-my-6 divide-y divide-gray-500/10">
                                 <div className="space-y-2 py-6">
-                                    <Link
-                                        to="/home"
-                                        className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white pulse-item ${
-                                            lastPart === "home"
-                                                ? "rounded-none border-b-2 border-black dark:border-white"
-                                                : ""
-                                        }`}
-                                    >
-                                        Home
-                                    </Link>
-                                    <Link
-                                        to="/about"
-                                        className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white pulse-item ${
-                                            lastPart === "about"
-                                                ? "rounded-none border-b-2 border-black dark:border-white"
-                                                : ""
-                                        }`}
-                                    >
-                                        About
-                                    </Link>
-                                    <Link
-                                        to="/projects"
-                                        className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white pulse-item ${
-                                            lastPart === "projects"
-                                                ? "rounded-none border-b-2 border-black dark:border-white"
-                                                : ""
-                                        }`}
-                                    >
-                                        Projects
-                                    </Link>
-                                    <Link
-                                        to="/resume"
-                                        className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white pulse-item ${
-                                            lastPart === "resume"
-                                                ? "rounded-none border-b-2 border-black dark:border-white"
-                                                : ""
-                                        }`}
-                                    >
-                                        Resume
-                                    </Link>
-                                    <Link
-                                        to="/contact"
-                                        className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white pulse-item ${
-                                            lastPart === "contact"
-                                                ? "rounded-none border-b-2 border-black dark:border-white"
-                                                : ""
-                                        }`}
-                                    >
-                                        Contact
-                                    </Link>
+                                    <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+                                        <Link
+                                            to="/home"
+                                            className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${
+                                                lastPart === "home"
+                                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                                    : ""
+                                            }`}
+                                        >
+                                            Home
+                                        </Link>
+                                    </motion.div>
+                                    <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+                                        <Link
+                                            to="/about"
+                                            className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${
+                                                lastPart === "about"
+                                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                                    : ""
+                                            }`}
+                                        >
+                                            About
+                                        </Link>
+                                    </motion.div>
+                                    <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+                                        <Link
+                                            to="/projects"
+                                            className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${
+                                                lastPart === "projects"
+                                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                                    : ""
+                                            }`}
+                                        >
+                                            Projects
+                                        </Link>
+                                    </motion.div>
+                                    <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+                                        <Link
+                                            to="/resume"
+                                            className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${
+                                                lastPart === "resume"
+                                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                                    : ""
+                                            }`}
+                                        >
+                                            Resume
+                                        </Link>
+                                    </motion.div>
+                                    <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+                                        <Link
+                                            to="/contact"
+                                            className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${
+                                                lastPart === "contact"
+                                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                                    : ""
+                                            }`}
+                                        >
+                                            Contact
+                                        </Link>
+                                    </motion.div>
                                 </div>
                             </div>
                         </div>
