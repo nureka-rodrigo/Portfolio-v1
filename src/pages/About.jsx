@@ -1,11 +1,12 @@
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 import PropTypes from "prop-types";
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { SkillsLogos } from "../data/SkillsLogos.jsx";
-import { CertificatesLogos } from "../data/CertificatesLogos.jsx";
+import {useState} from "react";
+import {Link} from "react-router-dom";
+import {SkillsLogos} from "../data/SkillsLogos.jsx";
+import {CertificatesLogos} from "../data/CertificatesLogos.jsx";
 import Transition from "../components/PageTransition.jsx";
+import {Tooltip} from "flowbite-react";
 
 const About = () => {
     const [activeTab, setActiveTab] = useState("Skills");
@@ -14,7 +15,7 @@ const About = () => {
         setActiveTab(tab);
     };
 
-    const Tab = ({ label, isActive, onClick }) => (
+    const Tab = ({label, isActive, onClick}) => (
         <li className="me-2">
             <Link
                 to="#"
@@ -42,13 +43,13 @@ const About = () => {
                 return (
                     <div className="flex flex-wrap items-center justify-center mx-auto w-3/4 p-3 max-w-screen-xl">
                         {SkillsLogos.map((logo, index) => (
-                            <img
-                                key={index}
-                                className="me-4 mb-4 md:mb-4 h-10 w-10 pulse-item"
-                                src={logo.src}
-                                alt={logo.alt}
-                                // title={logo.alt}
-                            />
+                            <Tooltip content={logo.alt} key={index}>
+                                <img
+                                    className="me-4 mb-4 md:mb-4 h-10 w-10 pulse-item"
+                                    src={logo.src}
+                                    alt={logo.alt}
+                                />
+                            </Tooltip>
                         ))}
                     </div>
                 );
@@ -70,7 +71,7 @@ const About = () => {
                                 <div className="flex flex-col flex-1 gap-2">
                                     <h3 className="text-base font-medium leading-7 text-black dark:text-white">
                                         Trainee Backend Developer
-                                        <br />
+                                        <br/>
                                         <span className="font-normal text-slate-600">
                                             CSI DevTeam - Uva Wellassa
                                             University
@@ -108,7 +109,7 @@ const About = () => {
                                 <div className="flex flex-col flex-1 gap-2">
                                     <h3 className="text-base font-medium leading-7 text-black dark:text-white">
                                         Higher Education
-                                        <br />
+                                        <br/>
                                         <span className="font-normal text-slate-500">
                                             Bachelor&apos;s in Computer Science
                                             & Technology
@@ -129,7 +130,7 @@ const About = () => {
                                 <div className="flex flex-col flex-1 gap-2">
                                     <h3 className="text-base font-medium leading-7 text-black dark:text-white">
                                         Secondary Education
-                                        <br />
+                                        <br/>
                                         <span className="font-normal text-slate-500">
                                             G.C.E. Advanced Level Examination -
                                             3C&apos;s
@@ -150,7 +151,7 @@ const About = () => {
                                 <div className="flex flex-col flex-1 gap-2">
                                     <h3 className="text-base font-medium leading-7 text-black dark:text-white">
                                         Primary Education
-                                        <br />
+                                        <br/>
                                         <span className="font-normal text-slate-500">
                                             G.C.E. Ordinary Level Examination -
                                             9A&apos;s
@@ -177,7 +178,8 @@ const About = () => {
                                             className="block"
                                         >
                                             <li className="relative pl-6 my-4 md:mx-8">
-                                                <span className="absolute left-0 z-10 flex items-center justify-center w-8 h-8 text-white -translate-x-1/2 rounded-full bg-white dark:bg-black">
+                                                <span
+                                                    className="absolute left-0 z-10 flex items-center justify-center w-8 h-8 text-white -translate-x-1/2 rounded-full bg-white dark:bg-black">
                                                     <img
                                                         className="h-10 w-10"
                                                         src={logo.src}
@@ -212,7 +214,7 @@ const About = () => {
     return (
         <>
             <div className="min-h-screen flex flex-col">
-                <Header />
+                <Header/>
                 <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
                     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
                         About Me
@@ -235,7 +237,8 @@ const About = () => {
                     </p>
                 </div>
                 <div>
-                    <div className="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 mx-auto w-3/4 max-w-screen-xl">
+                    <div
+                        className="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 mx-auto w-3/4 max-w-screen-xl">
                         <ul className="flex items-center justify-center flex-wrap -mb-px">
                             <Tab
                                 label="Skills"
@@ -261,7 +264,7 @@ const About = () => {
                     </div>
                     <div className="mt-4">{renderTabContent()}</div>
                 </div>
-                <Footer className="mt-auto" />
+                <Footer className="mt-auto"/>
             </div>
         </>
     );
