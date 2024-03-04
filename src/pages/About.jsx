@@ -220,20 +220,18 @@ const About = () => {
                         About Me
                     </h2>
                     <p className="mb-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-                        Hey there! I&apos;m Nureka Rodrigo, currently riding the
-                        coding waves as a Trainee Backend Developer with the CSI
+                        Hey there! I&apos;m Nureka Rodrigo, currently working
+                        as a Trainee Backend Developer with the CSI
                         DevTeam under the Department of Computer Science and
-                        Informatics at Uva Wellassa University. Yep, you got it
-                        right—I&apos;m from the vibrant shores of Sri Lanka!
+                        Informatics at Uva Wellassa University.
                     </p>
                     <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-                        Right now, I&apos;m deep into the world of coding while
+                        I&apos;m deep into the world of coding while
                         pursuing my Bachelor&apos;s in Computer Science &
                         Technology at Uva Wellassa University. Eager to learn
-                        and passionate about all things tech, I&apos;m on a
-                        mission to turn ideas into reality through lines of
-                        code. Let&apos;s connect and geek out over some cool
-                        projects!
+                        and passionate about all things tech, I&apos;m
+                        enthusiastic about learning and dedicated to transforming
+                        concepts into reality through the magic of coding.
                     </p>
                 </div>
                 <div>
