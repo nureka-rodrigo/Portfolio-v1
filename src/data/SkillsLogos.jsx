@@ -1,102 +1,102 @@
 export const SkillsLogos = [
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-        alt: "html5 logo",
+        alt: "HTML5",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-        alt: "css3 logo",
+        alt: "CSS3",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-        alt: "javascript logo",
+        alt: "JavaScript",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
-        alt: "c logo",
+        alt: "C",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-        alt: "java logo",
+        alt: "Java",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-        alt: "php logo",
+        alt: "PHP",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-        alt: "python logo",
+        alt: "Python",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
-        alt: "kotlin logo",
+        alt: "Kotlin",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-        alt: "bootstrap logo",
+        alt: "Bootstrap",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-        alt: "tailwindcss logo",
+        alt: "Tailwind CSS",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-        alt: "react logo",
+        alt: "React",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
-        alt: "spring logo",
+        alt: "Spring",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
-        alt: "django logo",
+        alt: "Django",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
-        alt: "laravel logo",
+        alt: "Laravel",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-        alt: "nodejs logo",
+        alt: "Node.js",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/composer/composer-original.svg",
-        alt: "composer logo",
+        alt: "Composer",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-        alt: "mysql logo",
+        alt: "MySQL",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
-        alt: "microsoft sql server logo",
+        alt: "Microsoft SQL Server",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg",
-        alt: "android studio logo",
+        alt: "Android Studio",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
-        alt: "firebase logo",
+        alt: "Firebase",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
-        alt: "google cloud logo",
+        alt: "Google Cloud",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
-        alt: "canva logo",
+        alt: "Canva",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-        alt: "figma logo",
+        alt: "Figma",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original.svg",
-        alt: "windows logo",
+        alt: "Windows",
     },
     {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
-        alt: "linux logo",
+        alt: "Linux",
     },
 ];

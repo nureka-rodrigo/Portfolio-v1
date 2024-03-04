@@ -47,6 +47,7 @@ const About = () => {
                                 className="me-4 mb-4 md:mb-4 h-10 w-10 pulse-item"
                                 src={logo.src}
                                 alt={logo.alt}
+                                // title={logo.alt}
                             />
                         ))}
                     </div>
