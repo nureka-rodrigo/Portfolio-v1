@@ -3,8 +3,11 @@ import Footer from "../components/Footer.jsx";
 import { Link } from "react-router-dom";
 import { ProjectData } from "../data/ProjectData.jsx";
 import Transition from "../components/PageTransition.jsx";
+import {useTheme} from "../hooks/ThemeProvider.jsx";
 
 const Projects = () => {
+    const { currentTheme } = useTheme();
+
     return (
         <>
             <div className="flex flex-col min-h-screen min-w-fit">
@@ -29,7 +32,7 @@ const Projects = () => {
                                     <div className="relative flex flex-col text-gray-900 dark:text-white bg-white dark:bg-black shadow-md dark:shadow-light bg-clip-border rounded-xl w-auto">
                                         <div className="relative mx-4 mt-4 overflow-hidden bg-white bg-clip-border rounded-xl">
                                             <img
-                                                src={item.img}
+                                                src={currentTheme === "dark" ? item.imgDark : item.imgLight}
                                                 alt="card-image"
                                                 className="object-cover w-full h-full"
                                             />
