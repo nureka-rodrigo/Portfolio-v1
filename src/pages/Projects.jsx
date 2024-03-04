@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ProjectData } from "../data/ProjectData.jsx";
 import Transition from "../components/PageTransition.jsx";
 import {useTheme} from "../hooks/ThemeProvider.jsx";
+import {FaGithub} from "react-icons/fa";
 
 const Projects = () => {
     const { currentTheme } = useTheme();
@@ -27,7 +28,7 @@ const Projects = () => {
                             {ProjectData.map((item, index) => (
                                 <div
                                     key={index}
-                                    className="space-y-4 pulse-item"
+                                    className="space-y-4"
                                 >
                                     <div className="relative flex flex-col text-gray-900 dark:text-white bg-white dark:bg-black shadow-md dark:shadow-light bg-clip-border rounded-xl w-auto">
                                         <div className="relative mx-4 mt-4 overflow-hidden bg-white bg-clip-border rounded-xl">
@@ -63,7 +64,7 @@ const Projects = () => {
                                                 target="_blank"
                                             >
                                                 <button
-                                                    className="text-gray-900 dark:text-white font-bold text-center uppercase text-xs py-3 px-6 pulse-item"
+                                                    className="bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 font-bold text-center uppercase align-middle select-none font-sans transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3 px-7 rounded-lg shadow-md shadow-blue-gray-500/10 hover:shadow-lg hover:shadow-blue-gray-500/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none block w-full hover:scale-[1.02] focus:scale-[1.02] active:scale-100"
                                                     type="button"
                                                 >
                                                     View on GitHub

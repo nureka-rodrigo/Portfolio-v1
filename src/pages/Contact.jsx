@@ -114,6 +114,7 @@ const Contact = () => {
                     (response) => {
                         if (response.status === 200) {
                             setIsLoading(false);
+                            window.location.reload();
                         }
                     },
                     (error) => {
@@ -199,7 +200,7 @@ const Contact = () => {
                         <div className="flex justify-center items-center mx-auto">
                             <Button
                                 type="submit"
-                                className="text-white dark:text-gray-900 bg-gray-800 dark:bg-white hover:!bg-black dark:hover:!bg-gray-200"
+                                className="text-white dark:text-gray-900 bg-gray-800 dark:bg-white hover:!bg-black dark:hover:!bg-gray-200 font-bold text-center uppercase align-middle select-none font-sans transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-1 px-7 rounded-lg shadow-md shadow-blue-gray-500/10 hover:shadow-lg hover:shadow-blue-gray-500/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none block hover:scale-[1.02] focus:scale-[1.02] active:scale-100"
                                 isProcessing={isLoading}
                                 processingSpinner={
                                     <AiOutlineLoading className="h-6 w-6 animate-spin" />
