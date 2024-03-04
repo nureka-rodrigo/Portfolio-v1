@@ -2,6 +2,7 @@ import Portfolio from "../assets/projects-portfolio.png";
 import PortfolioDark from "../assets/projects-portfolio-dark.png";
 import ABCUniversity from "../assets/projects-abc_university.png";
 import ABCUniversityDark from "../assets/projects-abc_university-dark.png";
+import SLRMS from "../assets/projects-slrms.png";
 
 export const ProjectData = [
     {
@@ -25,8 +26,8 @@ export const ProjectData = [
         description: "Revolutionizing railway operations with a robust system that manages schedules, bookings, and passenger information seamlessly.",
         tags: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap", "Payment-Getaway", "SMS-Gateway",],
         link: "https://github.com/nureka-rodrigo/SLRMS",
-        imgLight: PortfolioDark,
-        imgDark: Portfolio,
+        imgLight: SLRMS,
+        imgDark: SLRMS,
     },
     {
         title: "Yummy Kitchen",
