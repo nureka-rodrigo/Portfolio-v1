@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/Landing.jsx";
 import Home from "./pages/Home.jsx";
 import Projects from "./pages/Projects.jsx";
-import Resume from "./pages/Resume.jsx";
 import Contact from "./pages/Contact.jsx";
 import Error404 from "./pages/404.jsx";
 import Snowfall from "react-snowfall";

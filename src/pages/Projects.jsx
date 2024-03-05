@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { ProjectData } from "../data/ProjectData.jsx";
 import Transition from "../components/PageTransition.jsx";
 import {useTheme} from "../hooks/ThemeProvider.jsx";
-import {FaGithub} from "react-icons/fa";
 
 const Projects = () => {
     const { currentTheme } = useTheme();
