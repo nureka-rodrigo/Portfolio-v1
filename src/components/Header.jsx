@@ -8,6 +8,7 @@ import {motion} from "framer-motion";
 
 const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const pdfPath = "Resume-Nureka-Rodrigo.pdf";
 
     let pathArray = useLocation().pathname.split("/");
     let lastPart = pathArray[pathArray.length - 1];
@@ -79,9 +80,8 @@ const Header = () => {
                         </Link>
                     </motion.div>
                     <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                        <Link
-                            to="/resume"
-                            target={"_blank"}
+                        <a
+                            href={pdfPath}
                             className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${
                                 lastPart === "resume"
                                     ? "rounded-none border-b-2 border-black dark:border-white"
@@ -89,7 +89,7 @@ const Header = () => {
                             }`}
                         >
                             Resume
-                        </Link>
+                        </a>
                     </motion.div>
                     <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
                         <Link
@@ -191,8 +191,8 @@ const Header = () => {
                                         </Link>
                                     </motion.div>
                                     <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                                        <Link
-                                            to="/resume"
+                                        <a
+                                            href={pdfPath}
                                             className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${
                                                 lastPart === "resume"
                                                     ? "rounded-none border-b-2 border-black dark:border-white"
@@ -200,7 +200,7 @@ const Header = () => {
                                             }`}
                                         >
                                             Resume
-                                        </Link>
+                                        </a>
                                     </motion.div>
                                     <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
                                         <Link
