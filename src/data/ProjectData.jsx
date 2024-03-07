@@ -8,7 +8,7 @@ export const ProjectData = [
     {
         title: "Portfolio",
         description: "Modern, responsive, and user-friendly portfolio website that showcases my skills, projects, and experience.",
-        tags: ["ReactJS", "HTML5", "CSS3", "JavaScript", "TailwindCSS", "EmailJS",],
+        tags: ["ReactJS", "HTML5", "CSS3", "JavaScript", "Tailwind CSS", "Email-Gateway",],
         link: "https://github.com/nureka-rodrigo/Portfolio",
         imgLight: PortfolioDark,
         imgDark: Portfolio,
@@ -16,7 +16,7 @@ export const ProjectData = [
     {
         title: "ABC University",
         description: "Explore a comprehensive Student Management System designed to streamline administrative tasks and enhance the academic experience.",
-        tags: ["ReactJS", "HTML5", "CSS3", "JavaScript", "TailwindCSS", "Python", "Django",],
+        tags: ["ReactJS", "HTML5", "CSS3", "JavaScript", "Tailwind CSS", "Python", "Django",],
         link: "https://github.com/nureka-rodrigo/abc-university-frontend",
         imgLight: ABCUniversityDark,
         imgDark: ABCUniversity,
