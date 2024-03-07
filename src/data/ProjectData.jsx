@@ -24,7 +24,7 @@ export const ProjectData = [
     {
         title: "Railway Management System",
         description: "Revolutionizing railway operations with a robust system that manages schedules, bookings, and passenger information seamlessly.",
-        tags: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap", "Payment-Getaway", "SMS-Gateway",],
+        tags: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Bootstrap", "Payment-Gateway", "SMS-Gateway",],
         link: "https://github.com/nureka-rodrigo/SLRMS",
         imgLight: SLRMS,
         imgDark: SLRMS,
