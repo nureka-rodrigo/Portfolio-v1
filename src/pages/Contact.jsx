@@ -27,6 +27,7 @@ const Contact = () => {
 
         if (data === "") {
             setInputErrorName("This field can not be empty!");
+            setName(null);
         } else {
             setInputErrorName(null);
             setName(data);
@@ -38,6 +39,7 @@ const Contact = () => {
 
         if (data === "") {
             setInputErrorEmail("This field can not be empty!");
+            setEmail(null);
         } else {
             setInputErrorEmail(null);
             setEmail(data);
@@ -49,6 +51,7 @@ const Contact = () => {
 
         if (data === "") {
             setInputErrorSubject("This field can not be empty!");
+            setSubject(null);
         } else {
             setInputErrorSubject(null);
             setSubject(data);
@@ -60,6 +63,7 @@ const Contact = () => {
 
         if (data === "") {
             setInputErrorMessage("This field can not be empty!");
+            setMessage(null);
         } else {
             setInputErrorMessage(null);
             setMessage(data);
