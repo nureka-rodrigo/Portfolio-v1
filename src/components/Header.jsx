@@ -36,7 +36,7 @@ const Header = () => {
                     >
                         <span className="sr-only">Open main menu</span>
                         <Bars3Icon
-                            className="h-6 w-6 text-black dark:text-white"
+                            className="h-6 w-6 text-black dark:text-white transition duration-500"
                             aria-hidden="true"
                         />
                     </button>
@@ -45,9 +45,9 @@ const Header = () => {
                     <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
                         <Link
                             to="/home"
-                            className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${
+                            className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white transition duration-500 ${
                                 lastPart === "home"
-                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                    ? "rounded-none border-b-2 border-black dark:border-white transition duration-500"
                                     : ""
                             }`}
                         >
@@ -57,9 +57,9 @@ const Header = () => {
                     <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
                         <Link
                             to="/about"
-                            className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${
+                            className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white transition duration-500 ${
                                 lastPart === "about"
-                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                    ? "rounded-none border-b-2 border-black dark:border-white transition duration-500"
                                     : ""
                             }`}
                         >
@@ -69,9 +69,9 @@ const Header = () => {
                     <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
                         <Link
                             to="/projects"
-                            className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${
+                            className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white transition duration-500 ${
                                 lastPart === "projects"
-                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                    ? "rounded-none border-b-2 border-black dark:border-white transition duration-500"
                                     : ""
                             }`}
                         >
@@ -82,9 +82,9 @@ const Header = () => {
                         <Link
                             to="https://flowcv.com/resume/ic2he0lik0"
                             target="_blank"
-                            className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${
+                            className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white transition duration-500 ${
                                 lastPart === "resume"
-                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                    ? "rounded-none border-b-2 border-black dark:border-white transition duration-500"
                                     : ""
                             }`}
                         >
@@ -94,9 +94,9 @@ const Header = () => {
                     <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
                         <Link
                             to="/contact"
-                            className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white ${
+                            className={`text-sm font-semibold leading-6 text-gray-900 dark:text-white transition duration-500 ${
                                 lastPart === "contact"
-                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                    ? "rounded-none border-b-2 border-black dark:border-white transition duration-500"
                                     : ""
                             }`}
                         >
@@ -128,12 +128,12 @@ const Header = () => {
                     </Transition.Child>
                     <div className="fixed inset-0 z-10"/>
                     <Dialog.Panel
-                        className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                        className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transition duration-500">
                         <div className="flex items-center justify-between pulse-item">
                             <Link to="/" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Nureka Rodrigo</span>
                                 <img
-                                    className="h-8 w-auto dark:invert"
+                                    className="h-8 w-auto dark:invert transition duration-500"
                                     src={Logo}
                                     alt="Brand"
                                 />
@@ -146,7 +146,7 @@ const Header = () => {
                             >
                                 <span className="sr-only">Close menu</span>
                                 <XMarkIcon
-                                    className="h-6 w-6 text-black dark:text-white"
+                                    className="h-6 w-6 text-black dark:text-white transition duration-500"
                                     aria-hidden="true"
                                 />
                             </button>
@@ -157,9 +157,9 @@ const Header = () => {
                                     <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
                                         <Link
                                             to="/home"
-                                            className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${
+                                            className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white transition duration-500 ${
                                                 lastPart === "home"
-                                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                                    ? "rounded-none border-b-2 border-black dark:border-white transition duration-500"
                                                     : ""
                                             }`}
                                         >
@@ -169,9 +169,9 @@ const Header = () => {
                                     <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
                                         <Link
                                             to="/about"
-                                            className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${
+                                            className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white transition duration-500 ${
                                                 lastPart === "about"
-                                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                                    ? "rounded-none border-b-2 border-black dark:border-white transition duration-500"
                                                     : ""
                                             }`}
                                         >
@@ -181,9 +181,9 @@ const Header = () => {
                                     <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
                                         <Link
                                             to="/projects"
-                                            className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${
+                                            className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white transition duration-500 ${
                                                 lastPart === "projects"
-                                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                                    ? "rounded-none border-b-2 border-black dark:border-white transition duration-500"
                                                     : ""
                                             }`}
                                         >
@@ -194,9 +194,9 @@ const Header = () => {
                                         <Link
                                             to="https://flowcv.com/resume/ic2he0lik0"
                                             target="_blank"
-                                            className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${
+                                            className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white transition duration-500 ${
                                                 lastPart === "resume"
-                                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                                    ? "rounded-none border-b-2 border-black dark:border-white transition duration-500"
                                                     : ""
                                             }`}
                                         >
@@ -206,9 +206,9 @@ const Header = () => {
                                     <motion.div whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
                                         <Link
                                             to="/contact"
-                                            className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white ${
+                                            className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-white transition duration-500 ${
                                                 lastPart === "contact"
-                                                    ? "rounded-none border-b-2 border-black dark:border-white"
+                                                    ? "rounded-none border-b-2 border-black dark:border-white transition duration-500"
                                                     : ""
                                             }`}
                                         >
