@@ -13,7 +13,7 @@ const Projects = () => {
             <div className="flex flex-col min-h-screen min-w-fit">
                 <Header />
                 <div className="py-8 lg:pt-16 px-4 mx-auto max-w-screen-md">
-                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white transition duration-500">
                         Explore My Projects
                     </h2>
                     <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
@@ -29,7 +29,7 @@ const Projects = () => {
                                     key={index}
                                     className="space-y-4"
                                 >
-                                    <div className="relative flex flex-col text-gray-900 dark:text-white bg-white dark:bg-black shadow-md dark:shadow-light bg-clip-border rounded-xl w-auto">
+                                    <div className="relative flex flex-col text-gray-900 dark:text-white bg-white dark:bg-black shadow-md dark:shadow-light bg-clip-border rounded-xl w-auto transition duration-500">
                                         <div className="relative mx-4 mt-4 overflow-hidden bg-white bg-clip-border rounded-xl">
                                             <img
                                                 src={currentTheme === "dark" ? item.imgDark : item.imgLight}
@@ -51,7 +51,7 @@ const Projects = () => {
                                             {item.tags.map((tag, tagIndex) => (
                                                 <span
                                                     key={tagIndex}
-                                                    className="my-2 bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"
+                                                    className="my-2 bg-gray-100 text-gray-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 transition duration-500"
                                                 >
                                                     {tag}
                                                 </span>
@@ -63,7 +63,7 @@ const Projects = () => {
                                                 target="_blank"
                                             >
                                                 <button
-                                                    className="bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 font-bold text-center uppercase align-middle select-none font-sans transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3 px-7 rounded-lg shadow-md shadow-blue-gray-500/10 hover:shadow-lg hover:shadow-blue-gray-500/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none block w-full hover:scale-[1.02] focus:scale-[1.02] active:scale-100"
+                                                    className="bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 font-bold text-center uppercase align-middle select-none font-sans disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3 px-7 rounded-lg shadow-md shadow-blue-gray-500/10 hover:shadow-lg hover:shadow-blue-gray-500/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none block w-full hover:scale-[1.02] focus:scale-[1.02] active:scale-100 transition duration-500"
                                                     type="button"
                                                 >
                                                     View on GitHub

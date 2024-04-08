@@ -22,7 +22,7 @@ const Header = () => {
                     <Link to="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">Nureka Rodrigo</span>
                         <img
-                            className="h-8 w-auto dark:invert"
+                            className="h-8 w-auto dark:invert transition duration-500"
                             src={Logo}
                             alt="Brand"
                         />

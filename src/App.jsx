@@ -28,7 +28,7 @@ function App() {
                     height: "100%",
                 }}
             />
-            <div className="bg-white dark:bg-black">
+            <div className="bg-white dark:bg-black transition duration-500">
                 <Routes>
                     <Route path={"/"} element={<LandingPage />} />
                     <Route path={"home"} element={<Home />} />

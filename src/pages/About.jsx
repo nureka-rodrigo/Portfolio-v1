@@ -69,7 +69,7 @@ const About = () => {
                                     2023-11-01
                                 </h4>
                                 <div className="flex flex-col flex-1 gap-2">
-                                    <h3 className="text-base font-medium leading-7 text-black dark:text-white">
+                                    <h3 className="text-base font-medium leading-7 text-black dark:text-white transition duration-500">
                                         Trainee Backend Developer
                                         <br/>
                                         <span className="font-normal text-slate-600">
@@ -107,7 +107,7 @@ const About = () => {
                                     2021
                                 </h4>
                                 <div className="flex flex-col flex-1 gap-2">
-                                    <h3 className="text-base font-medium leading-7 text-black dark:text-white">
+                                    <h3 className="text-base font-medium leading-7 text-black dark:text-white transition duration-500">
                                         Higher Education
                                         <br/>
                                         <span className="font-normal text-slate-500">
@@ -179,7 +179,7 @@ const About = () => {
                                         >
                                             <li className="relative pl-6 my-4 md:mx-8">
                                                 <span
-                                                    className="absolute left-0 z-10 flex items-center justify-center w-8 h-8 text-white -translate-x-1/2 rounded-full bg-white dark:bg-black">
+                                                    className="absolute left-0 z-10 flex items-center justify-center w-8 h-8 text-white -translate-x-1/2 rounded-full bg-white dark:bg-black transition duration-500">
                                                     <img
                                                         className="h-10 w-10"
                                                         src={logo.src}
@@ -187,7 +187,7 @@ const About = () => {
                                                     />
                                                 </span>
                                                 <div className="flex flex-col flex-1 gap-0">
-                                                    <h4 className="text-lg font-medium text-black dark:text-white">
+                                                    <h4 className="text-lg font-medium text-black dark:text-white transition duration-500">
                                                         {logo.title}
                                                     </h4>
                                                     <p className="text-sm text-slate-500">
@@ -216,7 +216,7 @@ const About = () => {
             <div className="min-h-screen flex flex-col">
                 <Header/>
                 <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white transition duration-500">
                         About Me
                     </h2>
                     <p className="mb-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
@@ -236,7 +236,7 @@ const About = () => {
                 </div>
                 <div>
                     <div
-                        className="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 mx-auto w-3/4 max-w-screen-xl">
+                        className="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 mx-auto w-3/4 max-w-screen-xl transition duration-500">
                         <ul className="flex items-center justify-center flex-wrap -mb-px">
                             <Tab
                                 label="Skills"

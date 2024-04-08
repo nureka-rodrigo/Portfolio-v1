@@ -137,7 +137,7 @@ const Contact = () => {
             <div className="flex flex-col min-h-screen">
                 <Header/>
                 <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white transition duration-500">
                         Contact Me
                     </h2>
                     <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
@@ -211,7 +211,7 @@ const Contact = () => {
                         <div className="flex justify-center items-center mx-auto">
                             <Button
                                 type="submit"
-                                className="text-white dark:text-gray-900 bg-gray-800 dark:bg-white hover:!bg-black dark:hover:!bg-gray-200 font-bold text-center uppercase align-middle select-none font-sans transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-1 px-7 rounded-lg shadow-md shadow-blue-gray-500/10 hover:shadow-lg hover:shadow-blue-gray-500/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none block hover:scale-[1.02] focus:scale-[1.02] active:scale-100"
+                                className="text-white dark:text-gray-900 bg-gray-800 dark:bg-white hover:!bg-black dark:hover:!bg-gray-200 font-bold text-center uppercase align-middle select-none font-sans disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-1 px-7 rounded-lg shadow-md shadow-blue-gray-500/10 hover:shadow-lg hover:shadow-blue-gray-500/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none block hover:scale-[1.02] focus:scale-[1.02] active:scale-100 transition duration-500"
                                 isProcessing={isLoading}
                                 processingSpinner={
                                     <AiOutlineLoading className="h-6 w-6 animate-spin"/>
@@ -227,7 +227,7 @@ const Contact = () => {
                 </div>
                 <div className="p-4 mx-auto max-w-screen-xl text-center lg:py-8">
                     <div className="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
-                        <span className="text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                        <span className="text-2xl tracking-tight font-extrabold text-gray-900 dark:text-white transition duration-500">
                             Find me on
                         </span>
                         <div
