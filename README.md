@@ -50,8 +50,8 @@ To set up and run this project locally,
 you'll need to have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
 Follow these steps:
 
-1. Clone the repository: `git clone https://github.com/nureka-rodrigo/Portfolio.git`
-2. Navigate into the project directory: `cd Portfolio`
+1. Clone the repository: `git clone https://github.com/nureka-rodrigo/Portfolio-v1`
+2. Navigate into the project directory: `cd Portfolio-v1`
 3. Install the dependencies: `npm install`
 4. Start the application: `npm run dev`
 
